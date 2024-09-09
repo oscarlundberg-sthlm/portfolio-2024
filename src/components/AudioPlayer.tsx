@@ -30,10 +30,10 @@ function AudioPlayer({ setExpanded, expanded }: Props) {
   };
 
   return (
-    <div className=" bg-white">
+    <div className="">
       <div className="relative">
         <div className="relative z-10 grid grid-cols-[minmax(0,1fr),max-content,minmax(0,1fr)] items-center justify-between p-5">
-          <div className="text-left">
+          <div className="text-left text-white">
             <div className="font-bold">{audioMetaData.trackTitle}</div>
             <div className="text-sm">{audioMetaData.artist}</div>
           </div>
@@ -51,9 +51,9 @@ function AudioPlayer({ setExpanded, expanded }: Props) {
                 aria-description="Play/pause toggle"
                 onClick={() => actions.playPauseToggle()}
                 disabled={disabled}
-                className="rounded-full bg-amber-600 text-white hover:bg-amber-500  h-16 w-16 disabled:opacity-30 flex items-center justify-center"
+                className="rounded-full bg-accent text-white hover:bg-accent  h-16 w-16 disabled:opacity-30 flex items-center justify-center"
               >
-                <PlayPauseIcons className="h-5 w-auto fill-current" />
+                <PlayPauseIcons className="h-5 w-auto fill-green-950" />
               </button>
             </div>
           </div>
@@ -64,10 +64,10 @@ function AudioPlayer({ setExpanded, expanded }: Props) {
               aria-description="expand the player for more options"
               onClick={() => setExpanded(!expanded)}
             >
-              <div className="rounded-full bg-gray-100 w-9 h-9 group-hover:bg-gray-200 flex items-center justify-center">
+              <div className="rounded-full  w-9 h-9  flex items-center justify-center">
                 <ChevronUpIcon
                   className={classNames(
-                    " stroke-gray-600 h-4 w-auto transition-transform",
+                    " stroke-accent/60 group-hover:stroke-accent h-4 w-auto transition-transform",
                     expanded && "rotate-180"
                   )}
                 />
@@ -76,7 +76,7 @@ function AudioPlayer({ setExpanded, expanded }: Props) {
           </div>
         </div>
       </div>
-      <hr />
+      {/* <hr /> */}
       <div className="h-96"></div>
     </div>
   );

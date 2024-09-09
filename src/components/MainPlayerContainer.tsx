@@ -7,7 +7,7 @@ function MainPlayerContainer() {
   return (
     <div
       className={classNames(
-        "fixed bottom-0 z-10 inset-x-0 border-t-2 border-gray-400 transition-transform duration-300 max-h-screen",
+        "fixed bottom-0 z-10 inset-x-0 bg-green-950 transition-transform duration-300 max-h-screen",
         {
           "translate-y-[calc(100%-105px)]": !expanded,
           "overflow-y-auto": expanded,

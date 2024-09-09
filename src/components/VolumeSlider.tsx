@@ -25,8 +25,8 @@ function VolumeSlider() {
         onClick={() => setVolume(0)}
         aria-description="set volume to 0"
       >
-        <div className="rounded-full w-9 h-9 group-hover:bg-gray-100 flex items-center justify-center">
-          <VolumeOffIcon className=" stroke-gray-600 h-4 w-auto" />
+        <div className="rounded-full w-9 h-9  flex items-center justify-center">
+          <VolumeOffIcon className=" stroke-accent/60 group-hover:stroke-accent h-4 w-auto" />
         </div>
       </button>
       <input
@@ -38,15 +38,15 @@ function VolumeSlider() {
         max="1"
         value={gain}
         step="0.01"
-        className=" accent-amber-500"
+        className=" accent-accent"
       />
       <button
         className="p-1.5 relative group"
         onClick={() => setVolume(1)}
         aria-description="set volume to max"
       >
-        <div className="rounded-full w-9 h-9 group-hover:bg-gray-100 flex items-center justify-center">
-          <VolumeLoudIcon className=" stroke-gray-600 h-4 w-auto" />
+        <div className="rounded-full w-9 h-9  flex items-center justify-center">
+          <VolumeLoudIcon className=" stroke-accent/60 group-hover:stroke-accent h-4 w-auto" />
         </div>
       </button>
     </div>

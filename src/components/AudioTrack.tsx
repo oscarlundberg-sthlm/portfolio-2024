@@ -23,10 +23,8 @@ function AudioTrack({ data }: Props) {
     <button
       onClick={handleOnClick}
       className={classNames(
-        " w-full py-2 px-5 flex justify-between group",
-        currentTrackMetaData.id === data.id
-          ? " bg-gradient-to-r from-amber-800 to-amber-600 text-white"
-          : " hover:bg-gray-200"
+        " w-full py-2 px-5 flex justify-between group ",
+        currentTrackMetaData.id === data.id ? "bg-accent" : "hover:bg-accent/50"
       )}
     >
       <div className="text-left">

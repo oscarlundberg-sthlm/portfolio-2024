@@ -24,6 +24,13 @@ const config: Config = {
           "900": "#782424",
           "950": "#410e0e",
         },
+        // custom:
+        white: "#FCF9EF",
+        black: "#121212",
+        green: {
+          950: "#0F1D1C",
+        },
+        accent: "#FAB700",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

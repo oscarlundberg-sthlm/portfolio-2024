@@ -30,12 +30,12 @@ export const VolumeLoudIcon = ({ className }: { className?: string }) => {
     >
       <path
         d="M4 5H1V11H4L9 15V1L4 5Z"
-        strokeWidth="2"
+        strokeWidth="1"
         strokeLinejoin="round"
       />
       <path
         d="M16.5 1.5C17.3539 2.35343 18.0312 3.36674 18.4934 4.48204C18.9555 5.59733 19.1934 6.79275 19.1934 8C19.1934 9.20725 18.9555 10.4027 18.4934 11.518C18.0312 12.6333 17.3539 13.6466 16.5 14.5M13 4C14.0608 5.06088 14.6568 6.49972 14.6568 8C14.6568 9.50028 14.0608 10.9391 13 12"
-        strokeWidth="2"
+        strokeWidth="1"
         strokeLinecap="round"
       />
     </svg>
@@ -51,7 +51,7 @@ export const VolumeOffIcon = ({ className }: { className?: string }) => {
     >
       <path
         d="M4 5H1V11H4L9 15V1L4 5Z"
-        strokeWidth="2"
+        strokeWidth="1"
         strokeLinejoin="round"
       />
     </svg>

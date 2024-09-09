@@ -86,7 +86,7 @@ export function useWebAudioApi(
 
       analyserNode.getByteFrequencyData(dataArray);
 
-      canvasCtx.fillStyle = "#fafaf9";
+      canvasCtx.fillStyle = "#0F1D1C";
       canvasCtx.fillRect(0, 0, width, height);
 
       const barWidth = width / bufferLength;
@@ -95,7 +95,7 @@ export function useWebAudioApi(
       for (let i = 0; i < bufferLength; i++) {
         const barHeight = dataArray[i];
 
-        canvasCtx.fillStyle = "#f59e0b";
+        canvasCtx.fillStyle = "#FCF9EF";
         canvasCtx.fillRect(x, height - barHeight / 2, barWidth, barHeight / 2);
 
         x += barWidth + 6;
