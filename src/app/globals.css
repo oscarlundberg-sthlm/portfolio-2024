@@ -25,32 +25,27 @@ body {
 
   @keyframes slideLeft {
     from {
-      transform: translateX(100%);
+      transform: translateX(1%);
     }
     to {
       transform: translateX(0%);
-      opacity: 1;
     }
   }
   @keyframes slideRight {
     from {
-      transform: translateX(-100%);
+      transform: translateX(-1%);
     }
     to {
       transform: translateX(0%);
-      opacity: 1;
     }
   }
   #logo-svg #logo-top-part {
-    opacity: 0;
-    animation: slideLeft .8s ease-out forwards;
+    animation: slideRight .8s ease-out alternate infinite;
   }
   #logo-svg #logo-middle-part {
-    opacity: 0;
-    animation: slideRight .8s ease-out forwards;
+    animation: slideLeft .8s ease-out alternate infinite;
   }
   #logo-svg #logo-bottom-part {
-    opacity: 0;
-    animation: slideLeft .8s ease-out forwards .1s;
+    animation: slideRight .8s ease-out alternate infinite .15s;
   }
 }

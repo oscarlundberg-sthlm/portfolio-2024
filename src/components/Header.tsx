@@ -1,5 +1,6 @@
 import { Logo } from "@/svg/logo";
 import Image from "next/image";
+import SocialLinksBasic from "./SocialLinksBasic";
 
 function Header() {
   return (
@@ -14,14 +15,11 @@ function Header() {
         />
       </div>
 
-      <div className="z-10 relative py-10 px-5">
-        <Logo className="h-auto min-w-[min(500px,100%)] max-w-[500px] " />
-        {/* <p className=" font-bold opacity-80">
-            Get to know me better
-            <br />
-            Take a walk in
-          </p> */}
-        {/* <h1 className="text-9xl  font-black tracking-tighter">my tracks</h1> */}
+      <div className="z-10 relative py-10 px-5 flex justify-between">
+        <Logo className=" h-auto min-w-[min(500px,100%)] max-w-[500px] " />
+        <div className="hidden lg:block">
+          <SocialLinksBasic />
+        </div>
       </div>
     </header>
   );

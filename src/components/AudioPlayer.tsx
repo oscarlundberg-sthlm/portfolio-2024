@@ -15,11 +15,13 @@ function AudioPlayer() {
     audioElementRef,
     isPlaying,
     cantPlay,
+    loading,
     actions,
     onAudioPlayEnded,
     onAudioCanPlay,
     onAudioEmptied,
     onAudioStalled,
+    onLoadStart,
   } = useAudioPlayerContext();
   const { setFullScreenTrackOpen } = useGlobalStatesContext();
 
@@ -55,15 +57,19 @@ function AudioPlayer() {
             />
           </button>
           <div className="flex justify-center mr-1 lg:mr-0">
-            <div className="flex items-center">
+            <div className="flex items-center relative">
               <audio
                 ref={audioElementRef}
+                onLoadStart={() => onLoadStart()}
                 onCanPlay={() => onAudioCanPlay()}
                 onEmptied={() => onAudioEmptied()}
                 onStalled={() => onAudioStalled()}
                 onEnded={() => onAudioPlayEnded()}
               ></audio>
               <PlayPauseButton placement="mainAudioPlayer" />
+              {loading && (
+                <div className="border-2 rounded-full border-t-custom-beige border-x-transparent border-b-transparent absolute inset-0 animate-spin"></div>
+              )}
             </div>
           </div>
           <div className="lg:flex justify-end hidden">
