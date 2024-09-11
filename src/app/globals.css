@@ -4,11 +4,53 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  @apply bg-white text-green-950 relative;
+  @apply bg-black text-white relative;
+}
+
+@layer base {
+  *:focus {
+    @apply ring-1 ring-white/0 outline-none;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .h-screen {
+    height: 100vh;
+    height: 100svh;
+  }
+
+  @keyframes slideLeft {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+  @keyframes slideRight {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+  #logo-svg #logo-top-part {
+    opacity: 0;
+    animation: slideLeft .8s ease-out forwards;
+  }
+  #logo-svg #logo-middle-part {
+    opacity: 0;
+    animation: slideRight .8s ease-out forwards;
+  }
+  #logo-svg #logo-bottom-part {
+    opacity: 0;
+    animation: slideLeft .8s ease-out forwards .1s;
   }
 }

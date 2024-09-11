@@ -1,12 +1,18 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Inter_Tight } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const interTight = Inter_Tight({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "plaja",
-  description: "Exploring audio on the web with Next.js",
+  metadataBase: new URL(process.env?.NEXT_PUBLIC_URL ?? ""),
+  title: "Yeah, that tracks",
+  description:
+    "This is an interactive CV/portfolio/presentation of me, Oscar Lundberg.",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#121212",
 };
 
 export default function RootLayout({
@@ -16,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={interTight.className}>{children}</body>
     </html>
   );
 }

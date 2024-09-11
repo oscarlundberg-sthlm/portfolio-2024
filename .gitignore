@@ -6,8 +6,7 @@
 .eslintcache
 
 # Environment variable files
-.env
-.env.build
+.env*
 
 # Log files
 npm-debug.log*

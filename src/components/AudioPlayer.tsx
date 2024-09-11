@@ -1,83 +1,86 @@
 "use client";
 
 import { useAudioPlayerContext } from "@/contexts/AudioPlayerContext/AudioPlayerProvider";
-import { ChevronUpIcon, PauseIcon, PlayIcon } from "@/svg/icons";
-import classNames from "classnames";
-import { useState } from "react";
+import { useGlobalStatesContext } from "@/contexts/GlobalStatesProvider";
+import { getImageFocusCSS } from "@/helpers/imageFocus";
+import Image from "next/image";
+import ExpanderButton from "./ExpanderButton";
+import PlayPauseButton from "./PlayPauseButton";
+import TrackTitle from "./TrackTitle";
 import VolumeSlider from "./VolumeSlider";
 
-interface Props {
-  setExpanded: (expanded: boolean) => void;
-  expanded: boolean;
-}
-
-function AudioPlayer({ setExpanded, expanded }: Props) {
+function AudioPlayer() {
   const {
     audioMetaData,
     audioElementRef,
     isPlaying,
+    cantPlay,
     actions,
     onAudioPlayEnded,
+    onAudioCanPlay,
+    onAudioEmptied,
+    onAudioStalled,
   } = useAudioPlayerContext();
-  const [disabled, setDisabled] = useState(true);
-
-  const PlayPauseIcons = ({ className }: { className?: string }) => {
-    return isPlaying ? (
-      <PauseIcon className={className} />
-    ) : (
-      <PlayIcon className={className} />
-    );
-  };
+  const { setFullScreenTrackOpen } = useGlobalStatesContext();
 
   return (
     <div className="">
       <div className="relative">
-        <div className="relative z-10 grid grid-cols-[minmax(0,1fr),max-content,minmax(0,1fr)] items-center justify-between p-5">
-          <div className="text-left text-white">
-            <div className="font-bold">{audioMetaData.trackTitle}</div>
-            <div className="text-sm">{audioMetaData.artist}</div>
-          </div>
-          <div className="flex justify-center">
+        <div className="relative z-10 grid grid-cols-[minmax(0,100%),max-content] lg:grid-cols-[minmax(0,1fr),max-content,minmax(0,1fr)] items-center justify-between p-2 lg:p-5">
+          <button
+            className="flex items-center group mr-3 lg:mr-5"
+            onClick={() => setFullScreenTrackOpen(true)}
+            disabled={cantPlay}
+            aria-description="Open the tracks' fullscreen view"
+          >
+            {audioMetaData?.image?.src && (
+              <div className="relative h-14 w-14 rounded-lg border border-gray-700 overflow-hidden">
+                <Image
+                  src={audioMetaData?.image?.src}
+                  width={audioMetaData?.image?.width}
+                  height={audioMetaData?.image?.height}
+                  alt={audioMetaData?.image?.alt}
+                  className="absolute inset-0 w-full h-full object-cover object-center"
+                  style={{
+                    objectPosition: getImageFocusCSS(audioMetaData?.image),
+                  }}
+                />
+              </div>
+            )}
+            <div className="pl-4"></div>
+            <TrackTitle
+              title={audioMetaData?.trackTitle}
+              artist={audioMetaData?.artist}
+              className="[&_:first-child]:group-hover:underline"
+            />
+          </button>
+          <div className="flex justify-center mr-1 lg:mr-0">
             <div className="flex items-center">
               <audio
                 ref={audioElementRef}
-                onCanPlay={() => setDisabled(false)}
-                onEmptied={() => setDisabled(true)}
-                onStalled={() => setDisabled(true)}
+                onCanPlay={() => onAudioCanPlay()}
+                onEmptied={() => onAudioEmptied()}
+                onStalled={() => onAudioStalled()}
                 onEnded={() => onAudioPlayEnded()}
               ></audio>
-              <button
-                role="switch"
-                aria-description="Play/pause toggle"
-                onClick={() => actions.playPauseToggle()}
-                disabled={disabled}
-                className="rounded-full bg-accent text-white hover:bg-accent  h-16 w-16 disabled:opacity-30 flex items-center justify-center"
-              >
-                <PlayPauseIcons className="h-5 w-auto fill-green-950" />
-              </button>
+              <PlayPauseButton placement="mainAudioPlayer" />
             </div>
           </div>
-          <div className="flex justify-end">
-            <VolumeSlider />
-            <button
-              className="p-1.5 relative group ml-4"
-              aria-description="expand the player for more options"
-              onClick={() => setExpanded(!expanded)}
-            >
-              <div className="rounded-full  w-9 h-9  flex items-center justify-center">
-                <ChevronUpIcon
-                  className={classNames(
-                    " stroke-accent/60 group-hover:stroke-accent h-4 w-auto transition-transform",
-                    expanded && "rotate-180"
-                  )}
-                />
-              </div>
-            </button>
+          <div className="lg:flex justify-end hidden">
+            <div className="hidden lg:block">
+              <VolumeSlider />
+            </div>
+            <div className="lg:ml-4">
+              <ExpanderButton
+                setExpanded={(arg) => setFullScreenTrackOpen(arg)}
+                expanded={false}
+                disabled={cantPlay}
+                color="white"
+              />
+            </div>
           </div>
         </div>
       </div>
-      {/* <hr /> */}
-      <div className="h-96"></div>
     </div>
   );
 }

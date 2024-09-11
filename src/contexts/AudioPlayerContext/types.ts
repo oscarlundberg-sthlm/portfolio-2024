@@ -6,6 +6,7 @@ export interface ContextValue {
   audioMetaData: AudioMetaData;
   audioElementRef: MutableRefObject<HTMLAudioElement | null>;
   isPlaying: boolean;
+  cantPlay: boolean;
   actions: {
     loadNewAudioTrack: (data: AudioMetaData) => Promise<void>;
     play: () => void;
@@ -13,5 +14,8 @@ export interface ContextValue {
     playPauseToggle: () => void;
   };
   onAudioPlayEnded: () => void;
-  webAudioApi: WebAudioApi;
+  onAudioCanPlay: () => void;
+  onAudioEmptied: () => void;
+  onAudioStalled: () => void;
+  webAudioApi?: WebAudioApi;
 }

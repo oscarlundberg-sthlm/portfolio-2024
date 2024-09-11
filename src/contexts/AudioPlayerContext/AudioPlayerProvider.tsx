@@ -1,4 +1,3 @@
-import { useWebAudioApi } from "@/hooks/useWebAudioApi";
 import { AudioMetaData } from "@/types/audioMetaData";
 import { createContext, ReactNode, useContext, useRef, useState } from "react";
 import { ContextValue } from "./types";
@@ -13,6 +12,7 @@ const audioPlayerContext = createContext<ContextValue>({} as any);
 export function AudioPlayerContextProvider({ children }: Props) {
   const [audioMetaData, setAudioMetaData] = useState<AudioMetaData>({} as any);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [cantPlay, setCantPlay] = useState(true);
   const audioElementRef = useRef<HTMLAudioElement>(null);
 
   const actions = useAudioPlayerActions(
@@ -21,7 +21,7 @@ export function AudioPlayerContextProvider({ children }: Props) {
     setAudioMetaData
   );
 
-  const webAudioApi = useWebAudioApi(audioElementRef, isPlaying);
+  // const webAudioApi = useWebAudioApi(audioElementRef, isPlaying);
 
   return (
     <audioPlayerContext.Provider
@@ -29,6 +29,7 @@ export function AudioPlayerContextProvider({ children }: Props) {
         audioMetaData,
         audioElementRef,
         isPlaying,
+        cantPlay,
         actions: {
           loadNewAudioTrack: (data) => actions.loadNewAudioTrack(data),
           play: () => actions.play(),
@@ -36,7 +37,10 @@ export function AudioPlayerContextProvider({ children }: Props) {
           playPauseToggle: () => actions.playPauseToggle(),
         },
         onAudioPlayEnded: () => actions.onAudioPlayEnded(),
-        webAudioApi,
+        onAudioCanPlay: () => setCantPlay(false),
+        onAudioEmptied: () => setCantPlay(true),
+        onAudioStalled: () => setCantPlay(true),
+        // webAudioApi,
       }}
     >
       {children}

@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        custom: "465px",
+      },
       colors: {
         gray: colors.stone,
         valencia: {
@@ -28,9 +31,22 @@ const config: Config = {
         white: "#FCF9EF",
         black: "#121212",
         green: {
+          700: "#485C5B",
+          800: "#303D3C",
+          900: "#1D2424",
           950: "#0F1D1C",
         },
+        "green-gray": {
+          800: "#222625",
+        },
         accent: "#FAB700",
+        "green-dark-accent": "#1E644B",
+        custom: {
+          gray: "#313131",
+          red: "#992E2E",
+          blue: "#304457",
+          beige: "#C1AF8A",
+        },
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
