@@ -31,7 +31,7 @@ function AudioSeeker() {
     return () => {
       audioElement.removeEventListener("timeupdate", updateCurrentTime);
     };
-  }, [isSeeking]); // Add isSeeking to dependency array
+  }, [isSeeking, audioElementRef]); // Add isSeeking to dependency array
 
   const handleOnChange = (e: SyntheticEvent) => {
     const inputElement = e.target as HTMLInputElement;
@@ -55,7 +55,7 @@ function AudioSeeker() {
         disabled={cantPlay}
         type="range"
         name="audio_seeker"
-        aria-description="Audio time seeker"
+        aria-label="Audio time seeker"
         onPointerDown={handleOnPointerDown} // Start seeking
         onPointerUp={handleOnPointerUp} // Finish seeking
         onChange={handleOnChange} // Update value while dragging

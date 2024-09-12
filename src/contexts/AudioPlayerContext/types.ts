@@ -17,7 +17,6 @@ export interface ContextValue {
   onAudioPlayEnded: () => void;
   onAudioCanPlay: () => void;
   onAudioEmptied: () => void;
-  onAudioStalled: () => void;
   onLoadStart: () => void;
   webAudioApi?: WebAudioApi;
 }

@@ -39,13 +39,13 @@ function Notification() {
           <button
             className="w-12 h-12 -m-6 group"
             onClick={dismiss}
-            aria-description="Close this notification"
+            aria-label="Close this notification"
           >
             <CloseIcon className="w-6 h-6 stroke-current group-hover:opacity-70" />
           </button>
         </div>
         <div className="p-4">
-          Get to know me better by playing one of the tracks
+          Get to know me better by playing one of the tracks.
           <br />
           <br />
           /Oscar

@@ -21,7 +21,7 @@ function ExpanderButton({
   return (
     <button
       className="p-1.5 relative group"
-      aria-description={!expanded ? "expand" : "minimize"}
+      aria-label={!expanded ? "expand" : "minimize"}
       onClick={() => setExpanded(!expanded)}
       disabled={disabled}
       {...rest}

@@ -20,7 +20,6 @@ function AudioPlayer() {
     onAudioPlayEnded,
     onAudioCanPlay,
     onAudioEmptied,
-    onAudioStalled,
     onLoadStart,
   } = useAudioPlayerContext();
   const { setFullScreenTrackOpen } = useGlobalStatesContext();
@@ -33,7 +32,7 @@ function AudioPlayer() {
             className="flex items-center group mr-3 lg:mr-5"
             onClick={() => setFullScreenTrackOpen(true)}
             disabled={cantPlay}
-            aria-description="Open the tracks' fullscreen view"
+            aria-label="Open the track in fullscreen view"
           >
             {audioMetaData?.image?.src && (
               <div className="relative h-14 w-14 rounded-lg border border-gray-700 overflow-hidden">
@@ -63,7 +62,6 @@ function AudioPlayer() {
                 onLoadStart={() => onLoadStart()}
                 onCanPlay={() => onAudioCanPlay()}
                 onEmptied={() => onAudioEmptied()}
-                onStalled={() => onAudioStalled()}
                 onEnded={() => onAudioPlayEnded()}
               ></audio>
               <PlayPauseButton placement="mainAudioPlayer" />

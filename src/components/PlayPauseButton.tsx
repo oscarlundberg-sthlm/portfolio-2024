@@ -19,8 +19,7 @@ function PlayPauseButton({ placement }: Props) {
 
   return (
     <button
-      role="switch"
-      aria-description="Play/pause toggle"
+      aria-label="Play/pause toggle"
       onClick={() => actions.playPauseToggle()}
       disabled={cantPlay}
       className="rounded-full  disabled:opacity-30 group"

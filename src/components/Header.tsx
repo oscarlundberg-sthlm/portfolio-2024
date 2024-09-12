@@ -8,6 +8,7 @@ function Header() {
       <div className="absolute inset-0 bg-custom-gray">
         <Image
           src="/img/steve-harvey-5zuCqOLaSyw-unsplash.jpg"
+          priority
           width={1920}
           height={1440}
           alt="close view of drum machine"

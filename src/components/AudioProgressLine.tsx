@@ -25,7 +25,7 @@ function AudioProgressLine() {
     return () => {
       audioElement.removeEventListener("timeupdate", updateCurrentTime);
     };
-  }, [audioElementRef.current]);
+  }, [audioElementRef]);
 
   useEffect(() => {
     const progressLineElement = progressLineRef.current;

@@ -47,10 +47,6 @@ export function AudioPlayerContextProvider({ children }: Props) {
           setCantPlay(true);
           setLoading(false);
         },
-        onAudioStalled: () => {
-          setCantPlay(true);
-          setLoading(false);
-        },
         onLoadStart: () => setLoading(true),
         // webAudioApi,
       }}

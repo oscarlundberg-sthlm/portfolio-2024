@@ -13,14 +13,18 @@ const ClientLayout = ({ children }: { children: ReactNode }) => {
   return (
     <GlobalStatesContextProvider>
       <AudioPlayerContextProvider>
-        <div className="relative z-10 mb-[72px] lg:mb-[104px]">
-          <Header />
-          <main>{children}</main>
-          <div className="py-5 lg:hidden">
-            <SocialLinksBasic />
+        <div className="flex flex-col h-screen">
+          <div className="shrink-0">
+            <Header />
           </div>
+          <div className="grow overflow-y-auto">
+            <main>{children}</main>
+            <div className="pt-5 pb-10 lg:hidden">
+              <SocialLinksBasic />
+            </div>
+          </div>
+          <MainPlayerContainer />
         </div>
-        <MainPlayerContainer />
 
         <Notification />
 

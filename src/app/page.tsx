@@ -33,20 +33,49 @@ export default function Home() {
       <AudioTrack
         data={{
           id: 2,
+          path: "songs/We Are Human.wav",
+          artist: "Random Access Memories",
+          trackTitle: "Web Development",
+          durationInSeconds: 216,
+          image: {
+            src: "/img/content/computer.jpg",
+            width: 2400,
+            height: 1600,
+            alt: "a commodore computer in 80s lighting",
+          },
+          additionalInfo: (
+            <>
+              <p>My web dev xp:</p>
+              <p>
+                I've worked with frameworks like Next.js (React, TypeScript,
+                JavaScript) and Laravel (PHP, Blade). CMSs' like Sanity,
+                Statamic and Wordpress. All kinds of third-party integrations.
+              </p>
+              <p>
+                I've touched most parts of web development, from databases &
+                backend, CMS, frontend & design, to deployment, DNS, etc...
+              </p>
+            </>
+          ),
+        }}
+      />
+      <AudioTrack
+        data={{
+          id: 3,
           path: "songs/Cola Hair - Microsampling 01.mp3",
-          artist: "The Bandmates",
-          trackTitle: "I Used To Be In Bands",
+          artist: "Innit",
+          trackTitle: "It's The Bass Player",
           durationInSeconds: 7,
           image: {
-            src: "/img/content/tom-rogerson-XYJ-huzNby4-unsplash.jpg",
-            width: 1536,
-            height: 2060,
-            alt: "a band performing on stage",
+            src: "/img/content/2013-2-killerball-5.jpg",
+            width: 1920,
+            height: 1979,
+            alt: "the band Killerball",
           },
           additionalInfo: (
             <>
               <p>
-                I've had the pleasure to be in bands, play behind
+                I've been in a bunch of bands, and I've played behind
                 singer-songwriters and artists.
               </p>
               <p>
@@ -60,10 +89,10 @@ export default function Home() {
       />
       <AudioTrack
         data={{
-          id: 3,
+          id: 4,
           path: "songs/Cola Hair - Microsampling 02.mp3",
           artist: "Go team, go sports",
-          trackTitle: "Indoor Rock Climber",
+          trackTitle: "Indoor Rock Climbing",
           durationInSeconds: 15,
           image: {
             src: "/img/content/patrick-hendry-_JjBZdLFQiM-unsplash.jpg",
@@ -80,6 +109,35 @@ export default function Home() {
                 snowboarding - where you can get into a flow state.
               </p>
               <p>To me, it's like meditation.</p>
+            </>
+          ),
+        }}
+      />
+      <AudioTrack
+        data={{
+          id: 5,
+          path: "songs/Cola Hair - Microsampling 02.mp3",
+          artist: "Key Performance Indicators",
+          trackTitle: "Everyday Vibes",
+          durationInSeconds: 15,
+          image: {
+            src: "/img/content/camping.jpg",
+            width: 1080,
+            height: 1344,
+            alt: "a rock climber scaling a wall",
+            focusY: 30,
+          },
+          additionalInfo: (
+            <>
+              <p>
+                Most days are spent at work. In fact, most of our life is lived
+                at work. That's why the everyday vibes matter to me.
+              </p>
+              <p>
+                The "everyday vibes" are a lot to unpack in a little text box,
+                but in short, if your workplace has actual sincere, warm
+                laughter on the regular - that's a really good sign to me.
+              </p>
             </>
           ),
         }}

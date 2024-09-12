@@ -2,9 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@import './scrollbars.css';
+
 body {
-  color: rgb(var(--foreground-rgb));
-  @apply bg-black text-white relative;
+  @apply bg-black text-white relative max-h-full h-full selection:text-black selection:bg-gray-300;
 }
 
 @layer base {

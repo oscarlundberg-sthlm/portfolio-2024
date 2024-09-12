@@ -99,9 +99,9 @@ export const CloseIcon = ({ className }: { className?: string }) => {
     >
       <path
         d="M6.70834 6.70831L16.2917 16.2916M6.70834 16.2916L16.2917 6.70831"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

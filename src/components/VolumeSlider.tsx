@@ -23,7 +23,7 @@ function VolumeSlider() {
       <button
         className="p-1.5 relative group -mr-1"
         onClick={() => setVolume(0)}
-        aria-description="set volume to 0"
+        aria-label="set volume to 0"
       >
         <div className="rounded-full w-9 h-9  flex items-center justify-center">
           <VolumeOffIcon className=" stroke-white/60 group-hover:stroke-white h-4 w-auto" />
@@ -33,7 +33,7 @@ function VolumeSlider() {
         onInput={handleOnInput}
         type="range"
         name="volume"
-        aria-description="Volume"
+        aria-label="Volume"
         min="0"
         max="1"
         value={gain}
@@ -43,7 +43,7 @@ function VolumeSlider() {
       <button
         className="p-1.5 relative group"
         onClick={() => setVolume(1)}
-        aria-description="set volume to max"
+        aria-label="set volume to max"
       >
         <div className="rounded-full w-9 h-9  flex items-center justify-center">
           <VolumeLoudIcon className=" stroke-white/60 group-hover:stroke-white h-4 w-auto" />

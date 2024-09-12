@@ -71,7 +71,7 @@ function TrackFullScreen() {
           {/* Content container */}
 
           {/* Scrollable container for additional info */}
-          <div className=" flex-grow overflow-y-auto max-w-[425px] rounded-lg bg-black/60 border-white/20 border mb-3">
+          <div className=" flex-grow overflow-y-auto max-w-[425px] rounded-lg bg-black/60 border-white/20 border mb-3 fullscreen-track-additional-info-box">
             <div className="p-5 text-2xl font-medium [&_p+p]:mt-5">
               {audioMetaData?.additionalInfo}
             </div>
