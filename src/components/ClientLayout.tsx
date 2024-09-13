@@ -3,6 +3,7 @@
 import { AudioPlayerContextProvider } from "@/contexts/AudioPlayerContext/AudioPlayerProvider";
 import { GlobalStatesContextProvider } from "@/contexts/GlobalStatesProvider";
 import { ReactNode } from "react";
+import AnonymousAnalytics from "./AnonymousAnalytics";
 import Header from "./Header";
 import MainPlayerContainer from "./MainPlayerContainer";
 import Notification from "./Notification";
@@ -29,6 +30,7 @@ const ClientLayout = ({ children }: { children: ReactNode }) => {
         <Notification />
 
         <TrackFullScreen />
+        <AnonymousAnalytics />
       </AudioPlayerContextProvider>
     </GlobalStatesContextProvider>
   );

@@ -9,10 +9,10 @@ export default function Home() {
       <AudioTrack
         data={{
           id: 1,
-          path: "songs/We Are Human.wav",
+          path: "/songs/3_temp.mp3",
+          durationInSeconds: 160,
           artist: "Oscar Lundberg",
-          trackTitle: "Hello",
-          durationInSeconds: 216,
+          trackTitle: "Introduction",
           image: {
             src: "/img/content/polaroids.jpg",
             width: 1500,
@@ -26,6 +26,10 @@ export default function Home() {
                 I'm a frontend developer graduate who got hired as a software
                 engineer straight out of school.
               </p>
+              <p>
+                I made all the songs on here btw. They don't have anything in
+                particular to do with the texts, they're just a fun twist.
+              </p>
             </>
           ),
         }}
@@ -33,10 +37,10 @@ export default function Home() {
       <AudioTrack
         data={{
           id: 2,
-          path: "songs/We Are Human.wav",
+          path: "/songs/microsampling_01.mp3",
+          durationInSeconds: 184,
           artist: "Random Access Memories",
           trackTitle: "Web Development",
-          durationInSeconds: 216,
           image: {
             src: "/img/content/computer.jpg",
             width: 2400,
@@ -62,10 +66,10 @@ export default function Home() {
       <AudioTrack
         data={{
           id: 3,
-          path: "songs/Cola Hair - Microsampling 01.mp3",
+          path: "/songs/We_Are_Human.mp3",
+          durationInSeconds: 216,
           artist: "Innit",
           trackTitle: "It's The Bass Player",
-          durationInSeconds: 7,
           image: {
             src: "/img/content/2013-2-killerball-5.jpg",
             width: 1920,
@@ -90,10 +94,10 @@ export default function Home() {
       <AudioTrack
         data={{
           id: 4,
-          path: "songs/Cola Hair - Microsampling 02.mp3",
+          path: "/songs/chill_nb3_v2.mp3",
+          durationInSeconds: 158,
           artist: "Go team, go sports",
           trackTitle: "Indoor Rock Climbing",
-          durationInSeconds: 15,
           image: {
             src: "/img/content/patrick-hendry-_JjBZdLFQiM-unsplash.jpg",
             width: 1080,
@@ -116,10 +120,10 @@ export default function Home() {
       <AudioTrack
         data={{
           id: 5,
-          path: "songs/Cola Hair - Microsampling 02.mp3",
+          path: "/songs/1_temp.mp3",
+          durationInSeconds: 196,
           artist: "Key Performance Indicators",
           trackTitle: "Everyday Vibes",
-          durationInSeconds: 15,
           image: {
             src: "/img/content/camping.jpg",
             width: 1080,

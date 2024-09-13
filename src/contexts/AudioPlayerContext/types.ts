@@ -1,4 +1,4 @@
-import { WebAudioApi } from "@/hooks/useWebAudioApi";
+// import { WebAudioApi } from "@/hooks/useWebAudioApi";
 import { AudioMetaData } from "@/types/audioMetaData";
 import { MutableRefObject } from "react";
 
@@ -18,5 +18,5 @@ export interface ContextValue {
   onAudioCanPlay: () => void;
   onAudioEmptied: () => void;
   onLoadStart: () => void;
-  webAudioApi?: WebAudioApi;
+  // webAudioApi?: WebAudioApi;
 }
