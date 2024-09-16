@@ -6,8 +6,8 @@ import { ReactNode } from "react";
 import AnonymousAnalytics from "./AnonymousAnalytics";
 import Header from "./Header";
 import MainPlayerContainer from "./MainPlayerContainer";
-import Notification from "./Notification";
 import SocialLinksBasic from "./SocialLinksBasic";
+import Toast from "./Toast";
 import TrackFullScreen from "./TrackFullScreen";
 
 const ClientLayout = ({ children }: { children: ReactNode }) => {
@@ -27,7 +27,7 @@ const ClientLayout = ({ children }: { children: ReactNode }) => {
           <MainPlayerContainer />
         </div>
 
-        <Notification />
+        <Toast />
 
         <TrackFullScreen />
         <AnonymousAnalytics />
