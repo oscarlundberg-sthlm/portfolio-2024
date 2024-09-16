@@ -26,7 +26,7 @@ function VolumeSlider() {
         aria-label="set volume to 0"
       >
         <div className="rounded-full w-9 h-9  flex items-center justify-center">
-          <VolumeOffIcon className=" stroke-white/60 group-hover:stroke-white h-4 w-auto" />
+          <VolumeOffIcon className="stroke-[1.5px] stroke-white/60 group-hover:stroke-white h-4 w-auto" />
         </div>
       </button>
       <input
@@ -46,7 +46,7 @@ function VolumeSlider() {
         aria-label="set volume to max"
       >
         <div className="rounded-full w-9 h-9  flex items-center justify-center">
-          <VolumeLoudIcon className=" stroke-white/60 group-hover:stroke-white h-4 w-auto" />
+          <VolumeLoudIcon className="stroke-[1.5px] stroke-white/60 group-hover:stroke-white h-4 w-auto" />
         </div>
       </button>
     </div>
