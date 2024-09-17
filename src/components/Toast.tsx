@@ -19,7 +19,7 @@ function Toast() {
     return () => {
       clearTimeout(timeoutId);
     };
-  }, []);
+  }, [isDismissed]);
 
   const dismiss = () => {
     setIsDismissed("1");

@@ -1,12 +1,10 @@
-import { AudioMetaDataUnPopulated } from "@/types/AudioMetaDataUnPopulated";
+import { AudioMetaDataPopulated } from "@/types/audioMetaData";
 import { Dispatch, MutableRefObject, SetStateAction } from "react";
 
 export function useAudioPlayerActions(
   audioElementRef: MutableRefObject<HTMLAudioElement | null>,
   setIsPlaying: Dispatch<SetStateAction<boolean>>,
-  setAudioMetaDataUnPopulated: Dispatch<
-    SetStateAction<AudioMetaDataUnPopulated>
-  >
+  setAudioMetaData: Dispatch<SetStateAction<AudioMetaDataPopulated>>
 ) {
   function ensureAudioElementRefCurrent(): boolean {
     if (!audioElementRef.current) {
@@ -16,9 +14,9 @@ export function useAudioPlayerActions(
     return true;
   }
 
-  async function loadNewAudioTrack(data: AudioMetaDataUnPopulated) {
+  async function loadNewAudioTrack(data: AudioMetaDataPopulated) {
     if (!ensureAudioElementRefCurrent()) return;
-    setAudioMetaDataUnPopulated(data);
+    setAudioMetaData(data);
     audioElementRef.current!.src = data.path;
     audioElementRef.current!.load();
     return new Promise<void>((resolve, reject) => {
