@@ -1,4 +1,4 @@
-import { AudioMetaData } from "@/types/audioMetaData";
+import { AudioMetaDataPopulated } from "@/types/audioMetaData";
 import { createContext, ReactNode, useContext, useRef, useState } from "react";
 import { ContextValue } from "./types";
 import { useAudioPlayerActions } from "./useAudioPlayerActions";
@@ -10,7 +10,9 @@ interface Props {
 const audioPlayerContext = createContext<ContextValue>({} as any);
 
 export function AudioPlayerContextProvider({ children }: Props) {
-  const [audioMetaData, setAudioMetaData] = useState<AudioMetaData>({} as any);
+  const [audioMetaData, setAudioMetaData] = useState<AudioMetaDataPopulated>(
+    {} as any
+  );
   const [isPlaying, setIsPlaying] = useState(false);
   const [loading, setLoading] = useState(false);
   const [cantPlay, setCantPlay] = useState(true);

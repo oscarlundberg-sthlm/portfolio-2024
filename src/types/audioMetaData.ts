@@ -1,13 +1,18 @@
 import { Image } from "./image";
 
-export interface AudioMetaData {
+// Raw data
+export interface AudioMetaDataUnPopulated {
   id: string;
   path: string;
   artist: string;
   trackTitle: string;
-  durationInSeconds: number;
   image: Image;
   additionalInfo?: {
     __html: TrustedHTML | string;
   };
+}
+
+// After server actions
+export interface AudioMetaDataPopulated extends AudioMetaDataUnPopulated {
+  durationInSeconds: number;
 }

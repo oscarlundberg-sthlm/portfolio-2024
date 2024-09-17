@@ -1,15 +1,15 @@
 "use client";
 
 import AudioTrack from "@/components/AudioTrack";
-import ClientLayout from "@/components/ClientLayout";
-import tracks from "@/data/tracks.json";
+import { useGlobalStatesContext } from "@/contexts/GlobalStatesProvider";
 
 export default function Home() {
+  const { tracks } = useGlobalStatesContext();
   return (
-    <ClientLayout>
+    <>
       {tracks.map((track) => (
         <AudioTrack key={track.id} data={track} />
       ))}
-    </ClientLayout>
+    </>
   );
 }

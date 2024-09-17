@@ -1,18 +1,17 @@
 import { useAudioPlayerContext } from "@/contexts/AudioPlayerContext/AudioPlayerProvider";
 import { useGlobalStatesContext } from "@/contexts/GlobalStatesProvider";
 import { formatDuration } from "@/helpers/time";
-import { AudioMetaData } from "@/types/audioMetaData";
+import { AudioMetaDataPopulated } from "@/types/audioMetaData";
 import classNames from "classnames";
 import { SyntheticEvent } from "react";
 import TrackTitle from "./TrackTitle";
 
 interface Props {
-  data: AudioMetaData;
+  data: AudioMetaDataPopulated;
 }
 
 function AudioTrack({ data }: Props) {
   const {
-    audioMetaData: currentTrackMetaData,
     actions: { play, loadNewAudioTrack },
   } = useAudioPlayerContext();
   const { setFullScreenTrackOpen } = useGlobalStatesContext();

@@ -2,6 +2,7 @@
 
 import { AudioPlayerContextProvider } from "@/contexts/AudioPlayerContext/AudioPlayerProvider";
 import { GlobalStatesContextProvider } from "@/contexts/GlobalStatesProvider";
+import { AudioMetaDataPopulated } from "@/types/audioMetaData";
 import { ReactNode } from "react";
 import AnonymousAnalytics from "./AnonymousAnalytics";
 import Header from "./Header";
@@ -10,9 +11,15 @@ import SocialLinksBasic from "./SocialLinksBasic";
 import Toast from "./Toast";
 import TrackFullScreen from "./TrackFullScreen";
 
-const ClientLayout = ({ children }: { children: ReactNode }) => {
+const ClientLayout = ({
+  children,
+  tracks,
+}: {
+  children: ReactNode;
+  tracks: AudioMetaDataPopulated[];
+}) => {
   return (
-    <GlobalStatesContextProvider>
+    <GlobalStatesContextProvider tracks={tracks}>
       <AudioPlayerContextProvider>
         <div className="flex flex-col h-screen">
           <div className="shrink-0">

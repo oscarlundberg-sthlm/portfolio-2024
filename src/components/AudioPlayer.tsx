@@ -13,10 +13,8 @@ function AudioPlayer() {
   const {
     audioMetaData,
     audioElementRef,
-    isPlaying,
     cantPlay,
     loading,
-    actions,
     onAudioPlayEnded,
     onAudioCanPlay,
     onAudioEmptied,

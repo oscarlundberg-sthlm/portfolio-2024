@@ -1,15 +1,15 @@
 // import { WebAudioApi } from "@/hooks/useWebAudioApi";
-import { AudioMetaData } from "@/types/audioMetaData";
+import { AudioMetaDataPopulated } from "@/types/audioMetaData";
 import { MutableRefObject } from "react";
 
 export interface ContextValue {
-  audioMetaData: AudioMetaData;
+  audioMetaData: AudioMetaDataPopulated;
   audioElementRef: MutableRefObject<HTMLAudioElement | null>;
   isPlaying: boolean;
   cantPlay: boolean;
   loading: boolean;
   actions: {
-    loadNewAudioTrack: (data: AudioMetaData) => Promise<void>;
+    loadNewAudioTrack: (data: AudioMetaDataPopulated) => Promise<void>;
     play: () => void;
     pause: () => void;
     playPauseToggle: () => void;

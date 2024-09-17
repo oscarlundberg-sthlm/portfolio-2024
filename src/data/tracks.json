@@ -2,7 +2,6 @@
   {
     "id": "track_id_1",
     "path": "/songs/3_temp.mp3",
-    "durationInSeconds": 160,
     "artist": "Oscar Lundberg",
     "trackTitle": "Introduction",
     "image": {
@@ -18,7 +17,6 @@
   {
     "id": "track_id_2",
     "path": "/songs/microsampling_01.mp3",
-    "durationInSeconds": 184,
     "artist": "Random Access Memories",
     "trackTitle": "Web Development",
     "image": {
@@ -34,7 +32,6 @@
   {
     "id": "track_id_3",
     "path": "/songs/We_Are_Human.mp3",
-    "durationInSeconds": 216,
     "artist": "Innit",
     "trackTitle": "It's The Bass Player",
     "image": {
@@ -50,7 +47,6 @@
   {
     "id": "track_id_4",
     "path": "/songs/chill_nb3_v2.mp3",
-    "durationInSeconds": 158,
     "artist": "Go team, go sports",
     "trackTitle": "Indoor Rock Climbing",
     "image": {
@@ -67,7 +63,6 @@
   {
     "id": "track_id_5",
     "path": "/songs/1_temp.mp3",
-    "durationInSeconds": 196,
     "artist": "Key Performance Indicators",
     "trackTitle": "Everyday Vibes",
     "image": {
