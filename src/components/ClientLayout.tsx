@@ -7,6 +7,7 @@ import { ReactNode } from "react";
 import AnonymousAnalytics from "./AnonymousAnalytics";
 import Header from "./Header";
 import MainPlayerContainer from "./MainPlayerContainer";
+import MediaSessionApi from "./MediaSessionApi";
 import SocialLinksBasic from "./SocialLinksBasic";
 import Toast from "./Toast";
 import TrackFullScreen from "./TrackFullScreen";
@@ -35,7 +36,7 @@ const ClientLayout = ({
         </div>
 
         <Toast />
-
+        <MediaSessionApi />
         <TrackFullScreen />
         <AnonymousAnalytics />
       </AudioPlayerContextProvider>
