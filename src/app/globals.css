@@ -29,6 +29,10 @@ body {
     /* mix-blend-mode: ; */
   }
 
+  .custom-shadow {
+    box-shadow: 3px 3px #C1AF8A;
+  }
+
   @keyframes logoSlideLeft {
     from {
       transform: translateX(1%);
