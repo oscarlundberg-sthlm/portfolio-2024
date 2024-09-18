@@ -5,6 +5,7 @@ import { GlobalStatesContextProvider } from "@/contexts/GlobalStatesProvider";
 import { AudioMetaDataPopulated } from "@/types/audioMetaData";
 import { ReactNode } from "react";
 import AnonymousAnalytics from "./AnonymousAnalytics";
+import AudioElement from "./AudioElement";
 import Header from "./Header";
 import MainPlayerContainer from "./MainPlayerContainer";
 import MediaSessionApi from "./MediaSessionApi";
@@ -37,6 +38,7 @@ const ClientLayout = ({
 
         <Toast />
         <MediaSessionApi />
+        <AudioElement />
         <TrackFullScreen />
         <AnonymousAnalytics />
       </AudioPlayerContextProvider>

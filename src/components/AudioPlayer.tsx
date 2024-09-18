@@ -10,22 +10,13 @@ import TrackTitle from "./TrackTitle";
 import VolumeSlider from "./VolumeSlider";
 
 function AudioPlayer() {
-  const {
-    audioMetaData,
-    audioElementRef,
-    cantPlay,
-    loading,
-    onAudioPlayEnded,
-    onAudioCanPlay,
-    onAudioEmptied,
-    onLoadStart,
-  } = useAudioPlayerContext();
+  const { audioMetaData, cantPlay } = useAudioPlayerContext();
   const { setFullScreenTrackOpen } = useGlobalStatesContext();
 
   return (
-    <div className="">
-      <div className="relative">
-        <div className="relative z-10 grid grid-cols-[minmax(0,100%),max-content] lg:grid-cols-[minmax(0,1fr),max-content,minmax(0,1fr)] items-center justify-between p-2 lg:p-5">
+    <div className="h-full">
+      <div className="relative h-full">
+        <div className="relative h-full z-10 grid grid-cols-[minmax(0,100%),max-content] lg:grid-cols-[minmax(0,1fr),max-content,minmax(0,1fr)] items-center justify-between p-2 lg:p-5">
           <button
             className="flex items-center group mr-3 lg:mr-5"
             onClick={() => setFullScreenTrackOpen(true)}
@@ -64,13 +55,6 @@ function AudioPlayer() {
           </div>
         </div>
       </div>
-      <audio
-        ref={audioElementRef}
-        onLoadStart={() => onLoadStart()}
-        onCanPlay={() => onAudioCanPlay()}
-        onEmptied={() => onAudioEmptied()}
-        onEnded={() => onAudioPlayEnded()}
-      ></audio>
     </div>
   );
 }

@@ -66,7 +66,7 @@ function TrackFullScreen() {
             {/* Mobile additional info box */}
             <div
               key={audioMetaData.id + "additionalInfoMobileBox"}
-              className="lg:hidden flex-grow overflow-y-auto max-w-[425px] pr-[17px] -mr-[17px] fullscreen-track-additional-info-box-mobile"
+              className="lg:hidden flex-grow overflow-y-auto max-w-[425px] pr-[16px] -mr-[18px] fullscreen-track-additional-info-box-mobile"
             >
               <div className="relative overflow-hidden lg:hidden rounded-lg border-white/20 border w-full pt-[66.66%]">
                 {audioMetaData?.image?.src && <TrackImage />}
@@ -80,7 +80,7 @@ function TrackFullScreen() {
             </div>
 
             {/* Non-scrollable bottom controls */}
-            <div className="mx-5 pt-10 lg:pt-5 flex-shrink-0 w-full max-w-[425px] ">
+            <div className="mx-5 pt-9 lg:pt-5 flex-shrink-0 w-full max-w-[425px] ">
               <div className="mx-1">
                 <TrackTitle
                   title={audioMetaData?.trackTitle}

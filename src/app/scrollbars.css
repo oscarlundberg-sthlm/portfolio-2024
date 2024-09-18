@@ -26,17 +26,17 @@
     }
     
     .fullscreen-track-additional-info-box-mobile::-webkit-scrollbar {
-        @apply w-[3px] lg:w-0;
+        @apply w-[2px] lg:w-0;
     }
 
     /* Style for the scrollbar track (background) */
     .fullscreen-track-additional-info-box-mobile::-webkit-scrollbar-track {
-        @apply bg-gray-600 rounded-full;
+        @apply bg-gray-700 rounded-full;
     }
         
     /* Style for the scrollbar thumb (the moving part) */
     .fullscreen-track-additional-info-box-mobile::-webkit-scrollbar-thumb {
-        @apply bg-gray-300 rounded-full;
+        @apply bg-gray-400 rounded-full;
     }
         
     /* Style when hovering over the scrollbar */

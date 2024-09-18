@@ -17,9 +17,11 @@ export function useKeyboard() {
         actions.playPauseToggle();
       }
       if (e.code === "ArrowLeft") {
+        e.preventDefault();
         actions.stepToSiblingTrack("prev");
       }
       if (e.code === "ArrowRight") {
+        e.preventDefault();
         actions.stepToSiblingTrack("next");
       }
     };
