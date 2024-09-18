@@ -50,7 +50,7 @@ function AudioSeeker() {
   };
 
   return (
-    <div className="mt-5">
+    <div className="">
       <input
         disabled={cantPlay}
         type="range"

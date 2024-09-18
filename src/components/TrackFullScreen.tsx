@@ -16,7 +16,7 @@ function TrackFullScreen() {
   return (
     <div
       className={classNames(
-        "[--py-outer:4px] lg:[--py-outer:8px] [--py-inner:56px] lg:[--py-inner:72px] w-full h-full bg-green-950 fixed inset-0 z-40 transition-transform duration-500 overflow-hidden",
+        "[--py-outer-bottom:8px] [--py-outer-top:8px] lg:[--py-outer-bottom:8px] lg:[--py-outer-top:8px] [--py-inner:56px] lg:[--py-inner:72px] w-full h-full bg-green-950 fixed inset-0 z-40 transition-transform duration-500 overflow-hidden",
         {
           "translate-y-full": !fullScreenTrackOpen,
         }
@@ -31,7 +31,7 @@ function TrackFullScreen() {
           <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-black/15 to-black bg-black/60"></div>
         </>
       )}
-      <div className="min-h-lvh max-h-lvh min-w-full max-w-full flex flex-col py-[var(--py-outer)] lg:py-0">
+      <div className="min-h-lvh max-h-lvh min-w-full max-w-full flex flex-col pb-[var(--py-outer-bottom)] pt-[var(--py-outer-top)] lg:py-0">
         <div className="h-[var(--py-inner)] w-full flex-shrink-0 flex justify-between items-center">
           <div></div>
           <div className="mx-3 mt-3 mb-3">
@@ -48,7 +48,7 @@ function TrackFullScreen() {
           <div className="relative hidden overflow-hidden lg:block rounded-lg border-white/20 border w-1/2">
             {audioMetaData?.image?.src && <TrackImage />}
           </div>
-          <div className="relative z-10 flex flex-col items-center h-[calc(100svh-(var(--py-inner)*2)-(var(--py-outer)*2))] lg:h-[calc(100svh-var(--py-inner)*2)] max-w-full px-5 lg:pr-0 lg:pl-7">
+          <div className="relative z-10 flex flex-col items-center h-[calc(100svh-(var(--py-inner)*2)-(var(--py-outer-bottom)+var(--py-outer-top)))] lg:h-[calc(100svh-var(--py-inner)*2)] max-w-full px-5 lg:pr-0 lg:pl-7">
             {/* Content container */}
             {/* Scrollable container for additional info */}
             {/* Desktop additional info box */}
@@ -87,10 +87,10 @@ function TrackFullScreen() {
                   artist={audioMetaData?.artist}
                 />
               </div>
-              <div className="">
+              <div className="mt-5">
                 <AudioSeeker />
               </div>
-              <div className="mt-5 lg:my-5 flex justify-center items-center [&>*:not(:first-child)]:ml-6">
+              <div className="mt-4 lg:mt-4 lg:mb-6 flex justify-center items-center [&>*:not(:first-child)]:ml-6">
                 <SkipTrackButton direction="prev" />
                 <PlayPauseButton placement="trackFullScreen" />
                 <SkipTrackButton direction="next" />
