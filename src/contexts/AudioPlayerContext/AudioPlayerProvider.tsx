@@ -42,6 +42,8 @@ export function AudioPlayerContextProvider({ children, tracks }: Props) {
           play: () => actions.play(),
           pause: () => actions.pause(),
           playPauseToggle: () => actions.playPauseToggle(),
+          stepToSiblingTrack: (direction) =>
+            actions.stepToSiblingTrack(direction),
         },
         onAudioPlayEnded: () => actions.onAudioPlayEnded(),
         onAudioCanPlay: () => {

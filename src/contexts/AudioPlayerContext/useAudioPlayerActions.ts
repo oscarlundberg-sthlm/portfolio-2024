@@ -59,6 +59,21 @@ export function useAudioPlayerActions(
     }
   }
 
+  async function stepToSiblingTrack(direction: "prev" | "next") {
+    if (!ensureAudioElementRefCurrent()) return;
+
+    const { currentTrackIndex } = getTrackArrayProps(tracks, audioMetaData);
+
+    if (currentTrackIndex === -1) return;
+
+    const step = direction === "next" ? 1 : -1;
+    const newTrackData = tracks[currentTrackIndex + step] ?? false;
+
+    if (!newTrackData) return;
+    await loadNewAudioTrack(newTrackData);
+    play();
+  }
+
   async function onAudioPlayEnded() {
     setIsPlaying(false);
     if (!ensureAudioElementRefCurrent()) return;
@@ -86,6 +101,7 @@ export function useAudioPlayerActions(
     play,
     pause,
     playPauseToggle,
+    stepToSiblingTrack,
     onAudioPlayEnded,
   };
 }

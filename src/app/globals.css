@@ -41,11 +41,10 @@ body {
     }
   }
   #logo-svg #logo-top-part {
-    animation: logoSlideRight .8
-    s ease-out alternate infinite;
+    animation: logoSlideRight .85s ease-out alternate infinite;
   }
   #logo-svg #logo-middle-part {
-    animation: logoSlideLeft .8s ease-out alternate infinite;
+    animation: logoSlideLeft .75s ease-out alternate infinite;
   }
   #logo-svg #logo-bottom-part {
     animation: logoSlideRight .8s ease-out alternate infinite .15s;

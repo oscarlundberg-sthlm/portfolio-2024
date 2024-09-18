@@ -23,19 +23,18 @@ function PlayPauseButton({ placement }: Props) {
         aria-label="Play/pause toggle"
         onClick={() => actions.playPauseToggle()}
         disabled={cantPlay}
-        className="rounded-full  disabled:opacity-30 group"
+        className="rounded-full hover:opacity-80 disabled:opacity-30 group"
       >
         <PlayPauseButtons
           className={classNames({
-            "fill-white group-hover:fill-white/80 h-12 w-12 lg:h-16 lg:w-16":
+            "fill-white h-12 w-12 lg:h-16 lg:w-16":
               placement === "mainAudioPlayer",
-            "fill-white group-hover:fill-white/80 h-16 w-16":
-              placement === "trackFullScreen",
+            "fill-white h-16 w-16": placement === "trackFullScreen",
           })}
         />
       </button>
       {loading && (
-        <div className="border-2 rounded-full border-t-custom-beige border-x-transparent border-b-transparent absolute inset-0 animate-spin"></div>
+        <div className="border-2 rounded-full border-t-white border-x-transparent border-b-transparent absolute inset-0 animate-spin"></div>
       )}
     </div>
   );

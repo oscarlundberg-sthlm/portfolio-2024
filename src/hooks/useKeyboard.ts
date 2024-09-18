@@ -16,6 +16,12 @@ export function useKeyboard() {
         e.preventDefault();
         actions.playPauseToggle();
       }
+      if (e.code === "ArrowLeft") {
+        actions.stepToSiblingTrack("prev");
+      }
+      if (e.code === "ArrowRight") {
+        actions.stepToSiblingTrack("next");
+      }
     };
 
     document.addEventListener("keydown", onKeyPress);

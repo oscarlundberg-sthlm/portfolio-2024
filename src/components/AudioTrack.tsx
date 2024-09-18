@@ -12,6 +12,7 @@ interface Props {
 
 function AudioTrack({ data }: Props) {
   const {
+    audioMetaData,
     actions: { play, loadNewAudioTrack },
   } = useAudioPlayerContext();
   const { setFullScreenTrackOpen } = useGlobalStatesContext();
@@ -25,12 +26,11 @@ function AudioTrack({ data }: Props) {
   return (
     <button
       onClick={handleOnClick}
-      className={classNames(
-        " w-full py-2.5 px-5 flex justify-between group hover:bg-custom-gray/50"
-        // currentTrackMetaData.id === data.id
-        //   ? "bg-green-dark-accent"
-        //   : "hover:bg-green-gray-800"
-      )}
+      className={classNames(" w-full py-2.5 px-5 flex justify-between group", {
+        "hover:bg-custom-gray/50": audioMetaData.id !== data.id,
+        "bg-custom-blue/70 hover:bg-custom-blue/90":
+          audioMetaData.id === data.id,
+      })}
     >
       <TrackTitle title={data?.trackTitle} artist={data?.artist} />
       <div className="flex items-center self-stretch text-sm">

@@ -11,35 +11,25 @@ interface Props {
 }
 
 function SkipTrackButton({ direction, className }: Props) {
-  const { tracks, setFullScreenTrackOpen } = useGlobalStatesContext();
+  const { tracks } = useGlobalStatesContext();
   const {
     loading,
+    cantPlay,
     audioMetaData: currentTrackData,
-    actions: { loadNewAudioTrack, play },
+    actions: { stepToSiblingTrack },
   } = useAudioPlayerContext();
 
-  const { currentTrackIndex, isLast, isFirst } = getTrackArrayProps(
-    tracks,
-    currentTrackData
-  );
+  const { isLast, isFirst } = getTrackArrayProps(tracks, currentTrackData);
 
   const disabled =
     loading ||
     (direction === "prev" && isFirst) ||
-    (direction === "next" && isLast);
+    (direction === "next" && isLast) ||
+    cantPlay;
 
-  const getTrackData = (direction: "prev" | "next") => {
-    const step = direction === "next" ? 1 : -1;
-    return tracks[currentTrackIndex + step] ?? false;
-  };
-
-  const handleOnClick = async (e: SyntheticEvent) => {
+  const handleOnClick = (e: SyntheticEvent) => {
     e.stopPropagation();
-    const newTrackData = getTrackData(direction);
-    if (!newTrackData) return;
-    await loadNewAudioTrack(newTrackData);
-    play();
-    setFullScreenTrackOpen(true);
+    stepToSiblingTrack(direction);
   };
 
   return (
@@ -47,13 +37,13 @@ function SkipTrackButton({ direction, className }: Props) {
       disabled={disabled}
       onClick={handleOnClick}
       className={classNames(
-        "flex items-center justify-center min-w-12 min-h-12 max-w-12 max-h-12  group disabled:opacity-30",
+        "flex items-center justify-center min-w-12 min-h-12 max-w-12 max-h-12 group hover:opacity-80 disabled:opacity-30",
         className
       )}
     >
       <SkipNextIcon
         className={classNames(
-          "fill-white group-hover:fill-white/80 min-w-9 min-h-9 max-w-9 max-h-9 group-disabled:group-hover:fill-white",
+          "fill-white min-w-9 min-h-9 max-w-9 max-h-9",
           direction === "prev" && "rotate-180"
         )}
       />

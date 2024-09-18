@@ -4,6 +4,7 @@ import { useAudioPlayerContext } from "@/contexts/AudioPlayerContext/AudioPlayer
 import { useGlobalStatesContext } from "@/contexts/GlobalStatesProvider";
 import ExpanderButton from "./ExpanderButton";
 import PlayPauseButton from "./PlayPauseButton";
+import SkipTrackButton from "./SkipTrackButton";
 import TrackImage from "./TrackImage";
 import TrackTitle from "./TrackTitle";
 import VolumeSlider from "./VolumeSlider";
@@ -43,8 +44,10 @@ function AudioPlayer() {
               className="[&_:first-child]:group-hover:underline"
             />
           </button>
-          <div className="flex justify-center items-center mr-1 lg:mr-0 [&>*:not(:first-child)]:ml-6">
+          <div className="flex justify-center items-center mr-1 lg:mr-0 [&>*:not(:first-child)]:ml-5">
+            <SkipTrackButton direction="prev" className="hidden lg:flex" />
             <PlayPauseButton placement="mainAudioPlayer" />
+            <SkipTrackButton direction="next" className="hidden lg:flex" />
           </div>
           <div className="lg:flex justify-end hidden">
             <div className="hidden lg:block">

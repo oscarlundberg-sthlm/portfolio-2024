@@ -13,6 +13,7 @@ export interface ContextValue {
     play: () => void;
     pause: () => void;
     playPauseToggle: () => void;
+    stepToSiblingTrack: (direction: "prev" | "next") => void;
   };
   onAudioPlayEnded: () => void;
   onAudioCanPlay: () => void;
