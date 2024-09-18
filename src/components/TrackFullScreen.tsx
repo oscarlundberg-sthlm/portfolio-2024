@@ -11,12 +11,12 @@ import TrackTitle from "./TrackTitle";
 function TrackFullScreen() {
   const { fullScreenTrackOpen, setFullScreenTrackOpen } =
     useGlobalStatesContext();
-  const { audioMetaData, loading } = useAudioPlayerContext();
+  const { audioMetaData } = useAudioPlayerContext();
 
   return (
     <div
       className={classNames(
-        " w-full h-full bg-green-950 fixed inset-0 z-40 transition-transform duration-500 overflow-hidden",
+        "[--py-outer:4px] lg:[--py-outer:8px] [--py-inner:56px] lg:[--py-inner:72px] w-full h-full bg-green-950 fixed inset-0 z-40 transition-transform duration-500 overflow-hidden",
         {
           "translate-y-full": !fullScreenTrackOpen,
         }
@@ -28,11 +28,11 @@ function TrackFullScreen() {
       {audioMetaData?.image?.src && (
         <>
           <TrackImage />
-          <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-black/15 to-black lg:bg-black/60"></div>
+          <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-black/15 to-black bg-black/60"></div>
         </>
       )}
-      <div className="min-h-lvh max-h-lvh min-w-full max-w-full flex flex-col py-2 lg:py-0">
-        <div className=" w-full flex-shrink-0 flex justify-between items-center">
+      <div className="min-h-lvh max-h-lvh min-w-full max-w-full flex flex-col py-[var(--py-outer)] lg:py-0">
+        <div className="h-[var(--py-inner)] w-full flex-shrink-0 flex justify-between items-center">
           <div></div>
           <div className="mx-3 mt-3 mb-3">
             <ExpanderButton
@@ -48,19 +48,39 @@ function TrackFullScreen() {
           <div className="relative hidden overflow-hidden lg:block rounded-lg border-white/20 border w-1/2">
             {audioMetaData?.image?.src && <TrackImage />}
           </div>
-          <div className="relative z-10 flex flex-col items-center h-[calc(100svh-144px-16px)] lg:h-[calc(100svh-144px)] max-w-full px-5">
+          <div className="relative z-10 flex flex-col items-center h-[calc(100svh-(var(--py-inner)*2)-(var(--py-outer)*2))] lg:h-[calc(100svh-var(--py-inner)*2)] max-w-full px-5 lg:pr-0 lg:pl-7">
             {/* Content container */}
             {/* Scrollable container for additional info */}
-            <div className=" flex-grow overflow-y-auto max-w-[425px] rounded-lg bg-black/60 border-white/20 border mb-3 fullscreen-track-additional-info-box">
+            {/* Desktop additional info box */}
+            <div
+              key={audioMetaData.id + "additionalInfoDesktopBox"}
+              className="hidden lg:block flex-grow overflow-y-auto max-w-[425px] rounded-lg bg-black/60 border-white/20 border mb-3 fullscreen-track-additional-info-box-desktop"
+            >
               <div
-                className="p-5 text-2xl font-medium [&_p+p]:mt-5"
+                className="p-7 text-2xl font-medium [&_p+p]:mt-5"
                 dangerouslySetInnerHTML={
                   audioMetaData?.additionalInfo ?? { __html: "" }
                 }
               ></div>
             </div>
+            {/* Mobile additional info box */}
+            <div
+              key={audioMetaData.id + "additionalInfoMobileBox"}
+              className="lg:hidden flex-grow overflow-y-auto max-w-[425px] pr-[17px] -mr-[17px] fullscreen-track-additional-info-box-mobile"
+            >
+              <div className="relative overflow-hidden lg:hidden rounded-lg border-white/20 border w-full pt-[66.66%]">
+                {audioMetaData?.image?.src && <TrackImage />}
+              </div>
+              <div
+                className="pt-7 text-2xl font-medium [&_p+p]:mt-5"
+                dangerouslySetInnerHTML={
+                  audioMetaData?.additionalInfo ?? { __html: "" }
+                }
+              ></div>
+            </div>
+
             {/* Non-scrollable bottom controls */}
-            <div className="mx-5 mt-5 flex-shrink-0 w-full max-w-[425px]">
+            <div className="mx-5 pt-10 lg:pt-5 flex-shrink-0 w-full max-w-[425px] ">
               <div className="mx-1">
                 <TrackTitle
                   title={audioMetaData?.trackTitle}
@@ -78,7 +98,7 @@ function TrackFullScreen() {
             </div>
           </div>
         </div>
-        <div className=" w-full flex-shrink-0 h-[72px]"></div>
+        <div className=" w-full flex-shrink-0 h-[var(--py-inner)]"></div>
       </div>
     </div>
   );

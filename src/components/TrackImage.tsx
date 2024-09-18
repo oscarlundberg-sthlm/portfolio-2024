@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 function TrackImage() {
-  const { audioMetaData, loading: audioIsLoading } = useAudioPlayerContext();
+  const { audioMetaData } = useAudioPlayerContext();
   const [imageLoaded, setImageLoaded] = useState(false);
 
   // Keep track of the previous image source to detect changes
