@@ -2,10 +2,9 @@
 
 import { useAudioPlayerContext } from "@/contexts/AudioPlayerContext/AudioPlayerProvider";
 import { useGlobalStatesContext } from "@/contexts/GlobalStatesProvider";
-import { getImageFocusCSS } from "@/helpers/imageFocus";
-import Image from "next/image";
 import ExpanderButton from "./ExpanderButton";
 import PlayPauseButton from "./PlayPauseButton";
+import TrackImage from "./TrackImage";
 import TrackTitle from "./TrackTitle";
 import VolumeSlider from "./VolumeSlider";
 
@@ -34,16 +33,7 @@ function AudioPlayer() {
           >
             {audioMetaData?.image?.src && (
               <div className="relative h-14 w-14 rounded-lg border border-gray-700 overflow-hidden">
-                <Image
-                  src={audioMetaData?.image?.src}
-                  width={audioMetaData?.image?.width}
-                  height={audioMetaData?.image?.height}
-                  alt={audioMetaData?.image?.alt}
-                  className="absolute inset-0 w-full h-full object-cover object-center"
-                  style={{
-                    objectPosition: getImageFocusCSS(audioMetaData?.image),
-                  }}
-                />
+                <TrackImage />
               </div>
             )}
             <div className="pl-4"></div>
@@ -53,20 +43,8 @@ function AudioPlayer() {
               className="[&_:first-child]:group-hover:underline"
             />
           </button>
-          <div className="flex justify-center mr-1 lg:mr-0">
-            <div className="flex items-center relative">
-              <audio
-                ref={audioElementRef}
-                onLoadStart={() => onLoadStart()}
-                onCanPlay={() => onAudioCanPlay()}
-                onEmptied={() => onAudioEmptied()}
-                onEnded={() => onAudioPlayEnded()}
-              ></audio>
-              <PlayPauseButton placement="mainAudioPlayer" />
-              {loading && (
-                <div className="border-2 rounded-full border-t-custom-beige border-x-transparent border-b-transparent absolute inset-0 animate-spin"></div>
-              )}
-            </div>
+          <div className="flex justify-center items-center mr-1 lg:mr-0 [&>*:not(:first-child)]:ml-6">
+            <PlayPauseButton placement="mainAudioPlayer" />
           </div>
           <div className="lg:flex justify-end hidden">
             <div className="hidden lg:block">
@@ -83,6 +61,13 @@ function AudioPlayer() {
           </div>
         </div>
       </div>
+      <audio
+        ref={audioElementRef}
+        onLoadStart={() => onLoadStart()}
+        onCanPlay={() => onAudioCanPlay()}
+        onEmptied={() => onAudioEmptied()}
+        onEnded={() => onAudioPlayEnded()}
+      ></audio>
     </div>
   );
 }

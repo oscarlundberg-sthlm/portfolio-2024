@@ -5,11 +5,12 @@ import { useAudioPlayerActions } from "./useAudioPlayerActions";
 
 interface Props {
   children: ReactNode;
+  tracks: AudioMetaDataPopulated[];
 }
 
 const audioPlayerContext = createContext<ContextValue>({} as any);
 
-export function AudioPlayerContextProvider({ children }: Props) {
+export function AudioPlayerContextProvider({ children, tracks }: Props) {
   const [audioMetaData, setAudioMetaData] = useState<AudioMetaDataPopulated>(
     {} as any
   );
@@ -21,7 +22,9 @@ export function AudioPlayerContextProvider({ children }: Props) {
   const actions = useAudioPlayerActions(
     audioElementRef,
     setIsPlaying,
-    setAudioMetaData
+    setAudioMetaData,
+    audioMetaData,
+    tracks
   );
 
   // const webAudioApi = useWebAudioApi(audioElementRef, isPlaying);

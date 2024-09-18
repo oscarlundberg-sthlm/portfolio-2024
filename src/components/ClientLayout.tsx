@@ -20,7 +20,7 @@ const ClientLayout = ({
 }) => {
   return (
     <GlobalStatesContextProvider tracks={tracks}>
-      <AudioPlayerContextProvider>
+      <AudioPlayerContextProvider tracks={tracks}>
         <div className="flex flex-col h-screen">
           <div className="shrink-0">
             <Header />

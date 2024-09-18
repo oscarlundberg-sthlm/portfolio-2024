@@ -1,10 +1,13 @@
+import { getTrackArrayProps } from "@/helpers/arrayHelper";
 import { AudioMetaDataPopulated } from "@/types/audioMetaData";
 import { Dispatch, MutableRefObject, SetStateAction } from "react";
 
 export function useAudioPlayerActions(
   audioElementRef: MutableRefObject<HTMLAudioElement | null>,
   setIsPlaying: Dispatch<SetStateAction<boolean>>,
-  setAudioMetaData: Dispatch<SetStateAction<AudioMetaDataPopulated>>
+  setAudioMetaData: Dispatch<SetStateAction<AudioMetaDataPopulated>>,
+  audioMetaData: AudioMetaDataPopulated,
+  tracks: AudioMetaDataPopulated[]
 ) {
   function ensureAudioElementRefCurrent(): boolean {
     if (!audioElementRef.current) {
@@ -56,11 +59,25 @@ export function useAudioPlayerActions(
     }
   }
 
-  function onAudioPlayEnded() {
+  async function onAudioPlayEnded() {
     setIsPlaying(false);
     if (!ensureAudioElementRefCurrent()) return;
-    // Reset audio track to the start
-    audioElementRef.current!.currentTime = 0;
+
+    const { currentTrackIndex, isLast } = getTrackArrayProps(
+      tracks,
+      audioMetaData
+    );
+
+    // check if last
+    if (isLast) {
+      // Reset audio track to the start
+      audioElementRef.current!.currentTime = 0;
+      return;
+    }
+
+    const nextTrack = tracks[currentTrackIndex + 1];
+    await loadNewAudioTrack(nextTrack);
+    play();
   }
 
   return {

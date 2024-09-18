@@ -24,7 +24,7 @@ body {
     height: 100svh;
   }
 
-  @keyframes slideLeft {
+  @keyframes logoSlideLeft {
     from {
       transform: translateX(1%);
     }
@@ -32,7 +32,7 @@ body {
       transform: translateX(0%);
     }
   }
-  @keyframes slideRight {
+  @keyframes logoSlideRight {
     from {
       transform: translateX(-1%);
     }
@@ -41,12 +41,13 @@ body {
     }
   }
   #logo-svg #logo-top-part {
-    animation: slideRight .8s ease-out alternate infinite;
+    animation: logoSlideRight .8
+    s ease-out alternate infinite;
   }
   #logo-svg #logo-middle-part {
-    animation: slideLeft .8s ease-out alternate infinite;
+    animation: logoSlideLeft .8s ease-out alternate infinite;
   }
   #logo-svg #logo-bottom-part {
-    animation: slideRight .8s ease-out alternate infinite .15s;
+    animation: logoSlideRight .8s ease-out alternate infinite .15s;
   }
 }
