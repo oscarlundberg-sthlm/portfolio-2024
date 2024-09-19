@@ -16,7 +16,7 @@ function AudioPlayer() {
   return (
     <div className="h-full">
       <div className="relative h-full">
-        <div className="relative h-full z-10 grid grid-cols-[minmax(0,100%),max-content] lg:grid-cols-[minmax(0,1fr),max-content,minmax(0,1fr)] items-center justify-between p-2 lg:p-5">
+        <div className="relative h-full z-10 grid grid-cols-[minmax(0,100%),max-content] lg:grid-cols-[minmax(0,1fr),max-content,minmax(0,1fr)] items-center justify-between p-3 lg:p-5">
           <button
             className="flex items-center group mr-3 lg:mr-5"
             onClick={() => setFullScreenTrackOpen(true)}
@@ -28,11 +28,12 @@ function AudioPlayer() {
                 <TrackImage />
               </div>
             )}
-            <div className="pl-4"></div>
+            <div className="pl-3 lg:pl-4"></div>
             <TrackTitle
               title={audioMetaData?.trackTitle}
               artist={audioMetaData?.artist}
               className="[&_:first-child]:group-hover:underline"
+              lineheight="tight"
             />
           </button>
           <div className="flex justify-center items-center mr-1 lg:mr-0 [&>*:not(:first-child)]:ml-5">

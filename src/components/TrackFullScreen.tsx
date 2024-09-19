@@ -85,6 +85,7 @@ function TrackFullScreen() {
                 <TrackTitle
                   title={audioMetaData?.trackTitle}
                   artist={audioMetaData?.artist}
+                  lineheight="tight"
                 />
               </div>
               <div className="mt-5">

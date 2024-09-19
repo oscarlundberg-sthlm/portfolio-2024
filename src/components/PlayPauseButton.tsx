@@ -27,7 +27,7 @@ function PlayPauseButton({ placement }: Props) {
       >
         <PlayPauseButtons
           className={classNames({
-            "fill-white h-12 w-12 lg:h-16 lg:w-16":
+            "fill-white h-[50px] w-[50px] lg:h-16 lg:w-16":
               placement === "mainAudioPlayer",
             "fill-white h-16 w-16": placement === "trackFullScreen",
           })}
