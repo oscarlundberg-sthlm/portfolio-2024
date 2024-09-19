@@ -31,7 +31,7 @@ function TrackFullScreen() {
           <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-black/15 to-black bg-black/60"></div>
         </>
       )}
-      <div className="min-h-lvh max-h-lvh min-w-(min(1728px,100%)) max-w-screen-3xl mx-auto flex flex-col justify-between pb-[var(--py-outer-bottom)] pt-[var(--py-outer-top)] lg:py-0">
+      <div className="min-h-svh max-h-svh min-w-(min(1728px,100%)) max-w-screen-3xl mx-auto flex flex-col justify-between pb-[var(--py-outer-bottom)] pt-[var(--py-outer-top)] lg:py-0">
         <div className="h-[var(--py-inner)] w-full flex-shrink-0 flex justify-between items-center">
           <div></div>
           <div className="mx-3 mt-3 mb-3">
