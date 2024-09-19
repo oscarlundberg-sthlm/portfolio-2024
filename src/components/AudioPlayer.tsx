@@ -14,7 +14,7 @@ function AudioPlayer() {
   const { setFullScreenTrackOpen } = useGlobalStatesContext();
 
   return (
-    <div className="h-full">
+    <div className="h-full mx-auto max-w-screen-3xl">
       <div className="relative h-full">
         <div className="relative h-full z-10 grid grid-cols-[minmax(0,100%),max-content] lg:grid-cols-[minmax(0,1fr),max-content,minmax(0,1fr)] items-center justify-between p-3 lg:p-5">
           <button

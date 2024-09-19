@@ -11,6 +11,8 @@ const config: Config = {
     extend: {
       screens: {
         custom: "465px",
+        "3xl": "1728px",
+        "3xl+": "1729px",
       },
       colors: {
         gray: colors.stone,

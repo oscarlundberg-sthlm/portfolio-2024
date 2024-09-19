@@ -16,7 +16,7 @@ function Header() {
         />
       </div>
 
-      <div className="z-10 relative py-10 px-5 flex justify-between">
+      <div className="z-10 relative py-10 px-5 flex justify-between mx-auto max-w-screen-3xl">
         <Logo className=" h-auto min-w-[min(500px,100%)] max-w-[500px] " />
         <div className="hidden lg:block">
           <SocialLinksBasic />

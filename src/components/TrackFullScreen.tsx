@@ -31,7 +31,7 @@ function TrackFullScreen() {
           <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-black/15 to-black bg-black/60"></div>
         </>
       )}
-      <div className="min-h-lvh max-h-lvh min-w-full max-w-full flex flex-col pb-[var(--py-outer-bottom)] pt-[var(--py-outer-top)] lg:py-0">
+      <div className="min-h-lvh max-h-lvh min-w-(min(1728px,100%)) max-w-screen-3xl mx-auto flex flex-col justify-between pb-[var(--py-outer-bottom)] pt-[var(--py-outer-top)] lg:py-0">
         <div className="h-[var(--py-inner)] w-full flex-shrink-0 flex justify-between items-center">
           <div></div>
           <div className="mx-3 mt-3 mb-3">
@@ -44,11 +44,11 @@ function TrackFullScreen() {
             />
           </div>
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center max-h-[802px]">
           <div className="relative hidden overflow-hidden lg:block rounded-lg border-white/20 border w-1/2">
             {audioMetaData?.image?.src && <TrackImage />}
           </div>
-          <div className="relative z-10 flex flex-col items-center h-[calc(100svh-(var(--py-inner)*2)-(var(--py-outer-bottom)+var(--py-outer-top)))] lg:h-[calc(100svh-var(--py-inner)*2)] max-w-full px-5 lg:pr-0 lg:pl-7">
+          <div className="relative z-10 flex flex-col items-center h-[calc(100svh-(var(--py-inner)*2)-(var(--py-outer-bottom)+var(--py-outer-top)))] lg:h-[calc(100svh-var(--py-inner)*2)] max-w-full max-h-[802px] px-5 lg:pr-0 lg:pl-7">
             {/* Content container */}
             {/* Scrollable container for additional info */}
             {/* Desktop additional info box */}
