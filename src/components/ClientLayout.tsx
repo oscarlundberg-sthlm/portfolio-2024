@@ -29,7 +29,7 @@ const ClientLayout = ({
           </div>
           <div className="grow overflow-y-auto">
             <main>{children}</main>
-            <div className="pt-5 pb-10 lg:hidden">
+            <div className="pt-8 px-5 pb-14 lg:hidden">
               <SocialLinksBasic />
             </div>
           </div>

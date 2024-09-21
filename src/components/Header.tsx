@@ -19,9 +19,9 @@ function Header() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/0 to-black"></div>
 
       <div className="z-10 relative px-5 h-full flex justify-between lg:grid lg:grid-cols-3 mx-auto max-w-screen-3xl">
-        <AVerySoundResumeProduction className="min-w-[min(60px,12%)] max-w-[60px] lg:min-w-[81px] lg:max-w-[81px] self-start order-1 lg:-order-1" />
-        <Logo className="py-14 self-center place-self-center h-auto min-w-[min(327px,82%)] max-w-[327px] " />
-        <div className="lg:hidden min-w-2"></div>
+        <AVerySoundResumeProduction className="grow min-w-[10%] max-w-[60px] lg:min-w-[81px] lg:max-w-[81px] self-start order-1 lg:-order-1" />
+        <Logo className="grow pt-12 pb-12 self-center place-self-center h-auto min-w-[60%] lg:min-w-[327px] max-w-[327px] " />
+        <div className="lg:hidden min-w-[5%] shrink-0"></div>
         <div className="hidden lg:block self-start place-self-end pt-5">
           <SocialLinksBasic />
         </div>

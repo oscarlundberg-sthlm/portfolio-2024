@@ -3,22 +3,22 @@
 @layer base {
     /* Style for the entire scrollbar */
     ::-webkit-scrollbar {
-        @apply w-1 lg:w-2
+        @apply w-1 lg:w-1
     }
       
     /* Style for the scrollbar track (background) */
     ::-webkit-scrollbar-track {
-        @apply bg-gray-900 rounded-full;
+        @apply bg-gray-700;
     }
       
     /* Style for the scrollbar thumb (the moving part) */
     ::-webkit-scrollbar-thumb {
-        @apply bg-gray-800 rounded-full;
+        @apply bg-custom-beige;
     }
       
     /* Style when hovering over the scrollbar */
     ::-webkit-scrollbar-thumb:hover {
-        @apply bg-gray-600
+        @apply bg-white
     }
 
     .fullscreen-track-additional-info-box-desktop::-webkit-scrollbar {

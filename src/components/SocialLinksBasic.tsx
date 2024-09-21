@@ -4,7 +4,7 @@ import SocialLink from "./SocialLink";
 function SocialLinksBasic() {
   return (
     <div className="flex justify-center items-center">
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid grid-cols-3 gap-5 lg:gap-3">
         <div className="">
           <SocialLink
             href="mailto:oscarlundberg@hotmail.com"
