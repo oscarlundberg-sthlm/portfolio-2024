@@ -11,9 +11,8 @@ const interTight = Inter_Tight({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env?.NEXT_PUBLIC_URL ?? ""),
-  title: "Yeah, that tracks",
-  description:
-    "This is an interactive CV/portfolio/presentation of me, Oscar Lundberg.",
+  title: "yeah. that tracks",
+  description: "a very sound resume",
 };
 
 export const viewport: Viewport = {
