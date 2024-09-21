@@ -4,6 +4,10 @@
 
 @import './scrollbars.css';
 
+:root {
+  font-size: 16px;
+}
+
 body {
   @apply bg-black text-white relative max-h-full h-full selection:text-black selection:bg-gray-300;
 }

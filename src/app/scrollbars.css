@@ -13,7 +13,7 @@
       
     /* Style for the scrollbar thumb (the moving part) */
     ::-webkit-scrollbar-thumb {
-        @apply bg-custom-beige;
+        @apply bg-white/70;
     }
       
     /* Style when hovering over the scrollbar */
