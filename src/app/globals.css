@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import './scrollbars.css';
+@import './animations.css';
 
 :root {
   font-size: 16px;
@@ -37,29 +38,4 @@ body {
     box-shadow: 3px 3px #C1AF8A;
   }
 
-  @keyframes logoSlideLeft {
-    from {
-      transform: translateX(1%);
-    }
-    to {
-      transform: translateX(0%);
-    }
-  }
-  @keyframes logoSlideRight {
-    from {
-      transform: translateX(-1%);
-    }
-    to {
-      transform: translateX(0%);
-    }
-  }
-  #logo-svg #logo-top-part {
-    animation: logoSlideRight .85s ease-out alternate infinite;
-  }
-  #logo-svg #logo-middle-part {
-    animation: logoSlideLeft .75s ease-out alternate infinite;
-  }
-  #logo-svg #logo-bottom-part {
-    animation: logoSlideRight .8s ease-out alternate infinite .15s;
-  }
 }
