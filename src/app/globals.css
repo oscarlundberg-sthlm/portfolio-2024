@@ -4,6 +4,7 @@
 
 @import './scrollbars.css';
 @import './animations.css';
+@import './a_very_sound_resume.css';
 
 :root {
   font-size: 16px;
@@ -35,7 +36,7 @@ body {
   }
 
   .custom-shadow {
-    box-shadow: 3px 3px #C1AF8A;
+    filter: drop-shadow(3px 3px #C1AF8A);
   }
 
 }

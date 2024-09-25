@@ -1,5 +1,6 @@
 import { useAudioPlayerContext } from "@/contexts/AudioPlayerContext/AudioPlayerProvider";
 import { useGlobalStatesContext } from "@/contexts/GlobalStatesProvider";
+import { Logo } from "@/svg/logo";
 import classNames from "classnames";
 import AudioSeeker from "./AudioSeeker";
 import ExpanderButton from "./ExpanderButton";
@@ -33,8 +34,10 @@ function TrackFullScreen() {
       )}
       <div className="min-h-svh max-h-svh min-w-(min(1728px,100%)) max-w-screen-3xl mx-auto flex flex-col justify-between pb-[var(--py-outer-bottom)] pt-[var(--py-outer-top)] lg:py-0">
         <div className="h-[var(--py-inner)] w-full flex-shrink-0 flex justify-between items-center">
-          <div></div>
-          <div className="mx-3 mt-3 mb-3">
+          <div className="m-3 pl-4 relative self-stretch flex items-center">
+            <Logo className="h-7 lg:h-8 w-auto" />
+          </div>
+          <div className="m-3">
             <ExpanderButton
               setExpanded={(bool) => setFullScreenTrackOpen(bool)}
               expanded={true}
@@ -66,7 +69,7 @@ function TrackFullScreen() {
             {/* Mobile additional info box */}
             <div
               key={audioMetaData.id + "additionalInfoMobileBox"}
-              className="lg:hidden flex-grow overflow-y-auto max-w-[425px] pr-[16px] -mr-[18px] fullscreen-track-additional-info-box-mobile"
+              className="lg:hidden flex-grow overflow-y-auto max-w-[425px] pr-[16px] -mr-[18px] mt-1 fullscreen-track-additional-info-box-mobile"
             >
               <div className="relative overflow-hidden lg:hidden rounded-lg border-white/20 border w-full pt-[66.66%]">
                 {audioMetaData?.image?.src && <TrackImage />}
