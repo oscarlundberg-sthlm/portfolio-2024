@@ -1,5 +1,6 @@
 :root {
   --color-primary: #463057;
+  --color-over-primary: #FCF9EF;
   --color-hover-on-playlist: #4630577b;
   --color-bg-dark: #202A3A;
   --color-bg-dark-transparent: #202A3A00;
@@ -7,13 +8,15 @@
 
 .theme-blue {
 --color-primary: #304457;
+--color-over-primary: #FCF9EF;
 --color-hover-on-playlist: #3131317b;
 --color-bg-dark: #121212;
 --color-bg-dark-transparent: #12121200;
 }
 
 .theme-orange {
---color-primary: #FA4B00;
+--color-primary: #c5260a;
+--color-over-primary: #FFF;
 --color-hover-on-playlist: #3131317b;
 --color-bg-dark: #091009;
 --color-bg-dark-transparent: #09100900;
@@ -21,12 +24,17 @@
 
 .theme-lilac {
 --color-primary: #463057;
+--color-over-primary: #FCF9EF;
 --color-hover-on-playlist: #4630577b;
 --color-bg-dark: #202A3A;
 --color-bg-dark-transparent: #202A3A00;
 }
 
 .a_very_sound_resume_bg #bg {
-    transition: fill ease 150ms;
-    fill: var(--color-primary);
+  transition: fill ease 150ms;
+  fill: var(--color-primary);
+}
+.a_very_sound_resume_bg *:not(#bg) {
+  transition: fill ease 150ms;
+  fill: var(--color-over-primary);
 }

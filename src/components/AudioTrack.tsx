@@ -31,7 +31,7 @@ function AudioTrack({ data }: Props) {
         {
           "hover:bg-[var(--color-hover-on-playlist)]":
             audioMetaData.id !== data.id,
-          "bg-[var(--color-primary)] hover:brightness-110":
+          "bg-[var(--color-primary)] text-[var(--color-over-primary)] hover:brightness-110":
             audioMetaData.id === data.id,
         }
       )}
