@@ -1,7 +1,8 @@
-import { Logo } from "@/svg/logo";
 import Image from "next/image";
 
 import { AVerySoundResume } from "@/svg/graphics";
+import ColorThemePicker from "./ColorThemePicker";
+import LogoDynamic from "./LogoDynamic";
 import SocialLinksBasic from "./SocialLinksBasic";
 
 function Header() {
@@ -17,16 +18,25 @@ function Header() {
           className="absolute inset-0 w-full h-full object-cover object-bottom mix-blend-luminosity brightness-[0.3]"
         />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-b from-black/0 to-black"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-bg-dark-transparent)] to-[var(--color-bg-dark)]"></div>
 
       <div className="z-10 relative px-5 h-full flex justify-between lg:grid lg:grid-cols-3 mx-auto max-w-screen-3xl">
-        <div className=" min-w-[min(16%,100px)] max-w-[60px] lg:min-w-[81px] lg:max-w-[81px] self-start order-1 lg:-order-1">
+        <div className="min-w-[min(16%,100px)] max-w-[60px] lg:min-w-[81px] lg:max-w-[81px] pb-12 order-1 lg:-order-1 flex flex-col justify-between">
           <AVerySoundResume />
+          <div className="lg:hidden flex justify-center">
+            <ColorThemePicker />
+          </div>
         </div>
-        <Logo className="grow pt-12 pb-12 self-center place-self-center h-auto min-w-[60%] lg:min-w-[327px] max-w-[327px] " />
+        <LogoDynamic
+          className="grow py-12 lg:py-0 self-center place-self-center h-auto min-w-[60%] lg:min-w-[327px] max-w-[327px]"
+          logoClassName="w-full h-auto"
+        />
         <div className="grow lg:hidden min-w-[5%] shrink-0"></div>
-        <div className="hidden lg:block self-start place-self-end pt-5">
+        <div className="hidden lg:flex self-start place-self-end pt-5">
           <SocialLinksBasic />
+          <div className="ml-3 flex justify-end">
+            <ColorThemePicker />
+          </div>
         </div>
       </div>
     </header>

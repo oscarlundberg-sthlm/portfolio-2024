@@ -1,6 +1,7 @@
 "use client";
 
 import { AudioPlayerContextProvider } from "@/contexts/AudioPlayerContext/AudioPlayerProvider";
+import { ColorThemeContextProvider } from "@/contexts/ColorTheme/ColorThemeProvider";
 import { GlobalStatesContextProvider } from "@/contexts/GlobalStatesProvider";
 import { AudioMetaDataPopulated } from "@/types/audioMetaData";
 import { ReactNode } from "react";
@@ -22,26 +23,28 @@ const ClientLayout = ({
 }) => {
   return (
     <GlobalStatesContextProvider tracks={tracks}>
-      <AudioPlayerContextProvider tracks={tracks}>
-        <div className="flex flex-col h-screen">
-          <div className="shrink-0">
-            <Header />
-          </div>
-          <div className="grow overflow-y-auto">
-            <main>{children}</main>
-            <div className="pt-8 px-5 pb-14 lg:hidden">
-              <SocialLinksBasic />
+      <ColorThemeContextProvider>
+        <AudioPlayerContextProvider tracks={tracks}>
+          <div className="flex flex-col h-screen">
+            <div className="shrink-0">
+              <Header />
             </div>
+            <div className="grow overflow-y-auto">
+              <main>{children}</main>
+              <div className="pt-8 px-5 pb-14 lg:hidden">
+                <SocialLinksBasic />
+              </div>
+            </div>
+            <MainPlayerContainer />
           </div>
-          <MainPlayerContainer />
-        </div>
 
-        <Toast />
-        <MediaSessionApi />
-        <AudioElement />
-        <TrackFullScreen />
-        <AnonymousAnalytics />
-      </AudioPlayerContextProvider>
+          <Toast />
+          <MediaSessionApi />
+          <AudioElement />
+          <TrackFullScreen />
+          <AnonymousAnalytics />
+        </AudioPlayerContextProvider>
+      </ColorThemeContextProvider>
     </GlobalStatesContextProvider>
   );
 };

@@ -22,7 +22,7 @@ function MainPlayerContainer() {
   return (
     <div
       className={classNames(
-        "min-h-[80px] max-h-[80px] lg:min-h-[104px] lg:max-h-[104px] shrink-0 z-10 w-full bg-black border-t border-gray-700 overflow-hidden ",
+        "min-h-[80px] max-h-[80px] lg:min-h-[104px] lg:max-h-[104px] shrink-0 z-10 w-full transition-colors bg-[var(--color-bg-dark)] border-t border-gray-700 overflow-hidden ",
         {
           "hidden lg:block": !show,
         }

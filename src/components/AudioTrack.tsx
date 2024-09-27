@@ -27,10 +27,11 @@ function AudioTrack({ data }: Props) {
     <button
       onClick={handleOnClick}
       className={classNames(
-        " w-full py-4 px-5 flex justify-between group mx-auto max-w-screen-3xl 3xl+:rounded-lg",
+        " w-full py-4 px-5 flex justify-between group mx-auto max-w-screen-3xl 3xl+:rounded-lg transition-colors",
         {
-          "hover:bg-custom-gray/50": audioMetaData.id !== data.id,
-          "bg-custom-blue/70 hover:bg-custom-blue/90":
+          "hover:bg-[var(--color-hover-on-playlist)]":
+            audioMetaData.id !== data.id,
+          "bg-[var(--color-primary)] hover:brightness-110":
             audioMetaData.id === data.id,
         }
       )}

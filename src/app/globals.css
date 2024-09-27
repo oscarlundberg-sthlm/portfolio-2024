@@ -5,13 +5,14 @@
 @import './scrollbars.css';
 @import './animations.css';
 @import './a_very_sound_resume.css';
+@import './color_theme.css';
 
 :root {
   font-size: 16px;
 }
 
 body {
-  @apply bg-black text-white relative max-h-full h-full selection:text-black selection:bg-gray-300;
+  @apply bg-[var(--color-bg-dark)] text-white relative max-h-full h-full selection:text-[var(--color-bg-dark)] selection:bg-gray-300;
 }
 
 @layer base {
@@ -36,7 +37,7 @@ body {
   }
 
   .custom-shadow {
-    filter: drop-shadow(3px 3px #C1AF8A);
+    filter: drop-shadow(3px 3px #a8a29e);
   }
 
 }

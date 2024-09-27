@@ -1,9 +1,9 @@
 import { useAudioPlayerContext } from "@/contexts/AudioPlayerContext/AudioPlayerProvider";
 import { useGlobalStatesContext } from "@/contexts/GlobalStatesProvider";
-import { Logo } from "@/svg/logo";
 import classNames from "classnames";
 import AudioSeeker from "./AudioSeeker";
 import ExpanderButton from "./ExpanderButton";
+import LogoDynamic from "./LogoDynamic";
 import PlayPauseButton from "./PlayPauseButton";
 import SkipTrackButton from "./SkipTrackButton";
 import TrackImage from "./TrackImage";
@@ -35,7 +35,10 @@ function TrackFullScreen() {
       <div className="min-h-svh max-h-svh min-w-(min(1728px,100%)) max-w-screen-3xl mx-auto flex flex-col justify-between pb-[var(--py-outer-bottom)] pt-[var(--py-outer-top)] lg:py-0">
         <div className="h-[var(--py-inner)] w-full flex-shrink-0 flex justify-between items-center">
           <div className="m-3 pl-4 relative self-stretch flex items-center">
-            <Logo className="h-7 lg:h-8 w-auto" />
+            <LogoDynamic
+              className="relative grayscale brightness-0 invert"
+              logoClassName="h-7 lg:h-8 w-auto"
+            />
           </div>
           <div className="m-3">
             <ExpanderButton

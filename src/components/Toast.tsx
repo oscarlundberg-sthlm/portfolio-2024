@@ -39,19 +39,18 @@ function Toast() {
       <div className="absolute inset-0 mx-auto max-w-screen-3xl">
         <div
           className={classNames(
-            "absolute z-30 min-w-[min(100%,425px)] bottom-0 left-1/2 -translate-x-1/2 lg:left-auto lg:right-0 px-3.5 pb-12 lg:p-10 transition-transform duration-500 pointer-events-auto",
+            "absolute z-30 min-w-[min(100%,425px)] bottom-0 left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-auto lg:right-0 px-3.5 pb-12 lg:p-10 transition-transform duration-500 pointer-events-auto",
             {
-              "translate-y-full lg:translate-x-full": !show,
-              "lg:translate-x-0": show,
+              "translate-y-full": !show,
             }
           )}
         >
-          <div className="min-w-full h-full relative rounded-lg overflow-hidden custom-shadow border border-custom-beige bg-black max-w-96 text-white">
+          <div className="min-w-full h-full relative rounded-lg overflow-hidden custom-shadow border border-gray-400 bg-black max-w-96 text-white">
             <div className="absolute inset-0 bg-custom-gray/10"></div>
             <div className="relative flex justify-between pl-5">
               <div className="grow overflow-hidden pt-2">
-                <PulseLinePulse className="inline-block stroke-custom-red h-8 min-w-14 max-w-14 avsr_pulse_animation" />
-                <PulseLineLine className="inline-block stroke-custom-red h-8 min-w-14 max-w-14 avsr_pulse_animation avsr_pulse_animation_delay -ml-px" />
+                <PulseLinePulse className="inline-block stroke-[var(--color-primary)] h-8 min-w-14 max-w-14 avsr_pulse_animation" />
+                <PulseLineLine className="inline-block stroke-[var(--color-primary)] h-8 min-w-14 max-w-14 avsr_pulse_animation avsr_pulse_animation_delay -ml-px" />
               </div>
               <div>
                 <button
