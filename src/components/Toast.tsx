@@ -45,7 +45,7 @@ function Toast() {
             }
           )}
         >
-          <div className="min-w-full h-full relative rounded-lg overflow-hidden custom-shadow border border-gray-400 bg-black max-w-96 text-white">
+          <div className="min-w-full h-full relative rounded-lg overflow-hidden custom-shadow border border-gray-400 bg-black max-w-96 text-[var(--color-theme-white)]">
             <div className="absolute inset-0 bg-custom-gray/10"></div>
             <div className="relative flex justify-between pl-5">
               <div className="grow overflow-hidden pt-2">

@@ -27,14 +27,14 @@ function PlayPauseButton({ placement }: Props) {
       >
         <PlayPauseButtons
           className={classNames({
-            "fill-white h-[50px] w-[50px] lg:h-16 lg:w-16":
+            "fill-current h-[50px] w-[50px] lg:h-16 lg:w-16":
               placement === "mainAudioPlayer",
-            "fill-white h-16 w-16": placement === "trackFullScreen",
+            "fill-current h-16 w-16": placement === "trackFullScreen",
           })}
         />
       </button>
       {loading && (
-        <div className="border-2 rounded-full border-t-white border-x-transparent border-b-transparent absolute inset-0 animate-spin"></div>
+        <div className="border-2 rounded-full border-t-current border-x-transparent border-b-transparent absolute inset-0 animate-spin"></div>
       )}
     </div>
   );

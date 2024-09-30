@@ -12,7 +12,7 @@
 }
 
 body {
-  @apply bg-[var(--color-bg-dark)] text-white relative max-h-full h-full selection:text-[var(--color-bg-dark)] selection:bg-gray-300;
+  @apply bg-[var(--color-bg-dark)] text-[var(--color-theme-white)] relative max-h-full h-full selection:text-[var(--color-bg-dark)] selection:bg-[var(--color-theme-white)];
 }
 
 @layer base {

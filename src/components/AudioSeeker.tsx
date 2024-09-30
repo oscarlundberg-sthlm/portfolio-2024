@@ -63,9 +63,9 @@ function AudioSeeker() {
         max={durationInSeconds}
         step={0.01}
         value={currentTime} // Controlled by state
-        className="w-full accent-white"
+        className="w-full accent-current"
       />
-      <div className="flex justify-between text-sm opacity-70">
+      <div className="flex justify-between text-sm opacity-70 tracking-wider">
         <div>{formatDuration(currentTime)}</div>
         <div>{formatDuration(durationInSeconds)}</div>
       </div>

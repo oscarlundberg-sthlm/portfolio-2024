@@ -54,7 +54,7 @@ function AudioProgressLine() {
   return (
     <div className="overflow-hidden relative w-full h-full bg-gray-700">
       <div
-        className="bg-white/50 w-full h-full transition-transform ease-linear"
+        className="bg-[var(--color-theme-white)] opacity-50 w-full h-full transition-transform ease-linear"
         style={{
           transform: "translateX(-100%)",
         }}

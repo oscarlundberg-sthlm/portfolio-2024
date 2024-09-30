@@ -18,7 +18,7 @@ function Header() {
           className="absolute inset-0 w-full h-full object-cover object-bottom mix-blend-luminosity brightness-[0.3]"
         />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-bg-dark-transparent)] to-[var(--color-bg-dark)]"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-[rgba(var(--color-bg-dark-raw),0.2)] to-[var(--color-bg-dark)]"></div>
 
       <div className="z-10 relative px-5 h-full flex justify-between lg:grid lg:grid-cols-3 mx-auto max-w-screen-3xl">
         <div className="min-w-[min(16%,100px)] max-w-[60px] lg:min-w-[81px] lg:max-w-[81px] pb-12 order-1 lg:-order-1 flex flex-col justify-between">

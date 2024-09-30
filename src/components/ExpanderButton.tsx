@@ -33,7 +33,7 @@ function ExpanderButton({
             expanded && "rotate-180",
             {
               " fill-accent/50 group-hover:fill-accent": color === "accent",
-              " fill-white group-hover:fill-white/80": color === "white",
+              " fill-current group-hover:opacity-70": color === "white",
               "h-6": size === "sm",
               "h-8": size === "lg",
             }

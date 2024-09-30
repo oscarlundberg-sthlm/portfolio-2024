@@ -43,7 +43,7 @@ function SkipTrackButton({ direction, className }: Props) {
     >
       <SkipNextIcon
         className={classNames(
-          "fill-white min-w-9 min-h-9 max-w-9 max-h-9",
+          "fill-current min-w-9 min-h-9 max-w-9 max-h-9",
           direction === "prev" && "rotate-180"
         )}
       />

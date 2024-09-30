@@ -24,7 +24,7 @@ function AudioPlayer() {
             aria-label="Open the track in fullscreen view"
           >
             {audioMetaData?.image?.src && (
-              <div className="relative h-14 w-14 rounded-lg border border-gray-700 overflow-hidden">
+              <div className="relative h-14 w-14 rounded-lg border border-[var(--color-theme-white-20)] overflow-hidden">
                 <TrackImage />
               </div>
             )}

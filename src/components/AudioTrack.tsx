@@ -31,7 +31,7 @@ function AudioTrack({ data }: Props) {
         {
           "hover:bg-[var(--color-hover-on-playlist)]":
             audioMetaData.id !== data.id,
-          "bg-[var(--color-primary)] text-[var(--color-over-primary)] hover:brightness-110":
+          "bg-[var(--color-primary)] text-[var(--color-theme-white)] hover:brightness-110":
             audioMetaData.id === data.id,
         }
       )}
@@ -41,7 +41,7 @@ function AudioTrack({ data }: Props) {
         artist={data?.artist}
         lineheight="tight"
       />
-      <div className="flex items-center self-stretch text-sm">
+      <div className="flex items-center self-stretch text-sm tracking-wider">
         {formatDuration(data.durationInSeconds)}
       </div>
     </button>

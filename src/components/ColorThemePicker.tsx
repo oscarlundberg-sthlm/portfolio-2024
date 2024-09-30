@@ -51,7 +51,9 @@ function ColorThemePicker() {
             "absolute rounded-full inset-0.5 -z-10 transition-colors duration-300 bg-[var(--color-bg-dark)] brightness-50"
           )}
         ></div>
-        <PaintBrush className={classNames(" h-6 w-6 fill-white")} />
+        <PaintBrush
+          className={classNames(" h-6 w-6 fill-[var(--color-theme-white)]")}
+        />
       </button>
       <button
         onClick={() => {
