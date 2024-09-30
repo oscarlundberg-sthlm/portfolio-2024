@@ -51,7 +51,7 @@ function TrackFullScreen() {
           </div>
         </div>
         <div className="flex justify-center max-h-[802px]">
-          <div className="relative hidden overflow-hidden lg:block rounded-lg border-[var(--color-theme-white-20)] border w-1/2">
+          <div className="relative hidden overflow-hidden lg:block rounded-lg border-[rgba(var(--color-theme-white-raw),0.2)] border w-1/2">
             {audioMetaData?.image?.src && <TrackImage />}
           </div>
           <div className="text-white relative z-10 flex flex-col items-center h-[calc(100svh-(var(--py-inner)*2)-(var(--py-outer-bottom)+var(--py-outer-top)))] lg:h-[calc(100svh-var(--py-inner)*2)] max-w-full max-h-[802px] px-5 lg:pr-0 lg:pl-7">
@@ -60,7 +60,7 @@ function TrackFullScreen() {
             {/* Desktop additional info box */}
             <div
               key={audioMetaData.id + "additionalInfoDesktopBox"}
-              className="hidden lg:block flex-grow overflow-y-auto max-w-[425px] rounded-lg bg-black/70 border-[var(--color-theme-white-20)] border mb-3 fullscreen-track-additional-info-box-desktop"
+              className="hidden lg:block flex-grow overflow-y-auto max-w-[425px] rounded-lg bg-black/70 border-[rgba(var(--color-theme-white-raw),0.2)] border mb-3 fullscreen-track-additional-info-box-desktop"
             >
               <div
                 className="p-7 text-2xl font-medium [&_p+p]:mt-5"
@@ -74,7 +74,7 @@ function TrackFullScreen() {
               key={audioMetaData.id + "additionalInfoMobileBox"}
               className="lg:hidden flex-grow overflow-y-auto max-w-[425px] pr-[16px] -mr-[18px] mt-1 fullscreen-track-additional-info-box-mobile"
             >
-              <div className="relative overflow-hidden lg:hidden rounded-lg border-[var(--color-theme-white-20)] border w-full pt-[66.66%]">
+              <div className="relative overflow-hidden lg:hidden rounded-lg border-[rgba(var(--color-theme-white-raw),0.2)] border w-full pt-[66.66%]">
                 {audioMetaData?.image?.src && <TrackImage />}
               </div>
               <div

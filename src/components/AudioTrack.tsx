@@ -29,7 +29,7 @@ function AudioTrack({ data }: Props) {
       className={classNames(
         " w-full py-4 px-5 flex justify-between group mx-auto max-w-screen-3xl 3xl+:rounded-lg transition-colors",
         {
-          "hover:bg-[var(--color-hover-on-playlist)]":
+          "hover:bg-[rgba(var(--color-primary-raw),0.4)]":
             audioMetaData.id !== data.id,
           "bg-[var(--color-primary)] text-[var(--color-theme-white)] hover:brightness-110":
             audioMetaData.id === data.id,

@@ -28,12 +28,12 @@ function ColorThemePicker() {
   return (
     <div
       ref={ref}
-      className="relative [--space-y:8px] [--between-swatches:0px]"
+      className="relative [--swatches-margin-t:8px] [--between-swatches:0px] w-11 h-11"
     >
       <button
         onClick={() => setOpen(!open)}
         className={classNames(
-          "relative z-10 h-11 w-11 group hover:scale-110 rounded-full flex items-center justify-center transition-all"
+          "relative z-10 h-11 w-11 group hover:scale-110 rounded-full flex items-center justify-center transition-all mb-1"
         )}
       >
         <div
@@ -55,16 +55,27 @@ function ColorThemePicker() {
           className={classNames(" h-6 w-6 fill-[var(--color-theme-white)]")}
         />
       </button>
+      <div
+        className={classNames(
+          "bg-[var(--color-bg-dark)] overflow-hidden border border-[rgba(var(--color-theme-white-raw),0.2)] -m-2 p-2 h-[calc(400%+var(--swatches-margin-t)+18px)] inset-x-0 rounded-full absolute left-0 top-0 origin-top transition-all duration-500",
+          {
+            "": open,
+            "scale-[0.5] translate-y-5 opacity-0": !open,
+          }
+        )}
+      >
+        <div className="absolute inset-0 bg-[rgba(var(--color-theme-white-raw),0.05)]"></div>
+      </div>
       <button
         onClick={() => {
           setColorThemeClass("theme-lilac");
           setOpen(false);
         }}
         className={classNames(
-          "group absolute flex items-center justify-center h-11 w-11 top-0 left-0 transition-transform duration-300",
-          open
-            ? " translate-y-[calc(var(--space-y)+(var(--between-swatches)*0)+100%)]"
-            : "translate-y-0"
+          "absolute top-0 left-0 group flex items-center justify-center h-11 w-11 transition-transform duration-300",
+          {
+            "translate-y-[calc(100%+var(--swatches-margin-t))]": open,
+          }
         )}
       >
         <div
@@ -81,10 +92,10 @@ function ColorThemePicker() {
           setOpen(false);
         }}
         className={classNames(
-          "group absolute flex items-center justify-center h-11 w-11 top-0 left-0 transition-transform duration-300 delay-75",
-          open
-            ? " translate-y-[calc(var(--space-y)+(var(--between-swatches)*1)+200%)]"
-            : "translate-y-0 "
+          "absolute top-0 left-0 group flex items-center justify-center h-11 w-11 transition-transform duration-300 delay-75",
+          {
+            "translate-y-[calc(200%+var(--swatches-margin-t))]": open,
+          }
         )}
       >
         <div
@@ -101,10 +112,10 @@ function ColorThemePicker() {
           setOpen(false);
         }}
         className={classNames(
-          "group absolute flex items-center justify-center h-11 w-11 top-0 left-0 transition-transform duration-300 delay-150",
-          open
-            ? "translate-y-[calc(var(--space-y)+(var(--between-swatches)*2)+300%)]"
-            : "translate-y-0"
+          "absolute top-0 left-0 group flex items-center justify-center h-11 w-11 transition-transform duration-300 delay-150 mb-0.5",
+          {
+            "translate-y-[calc(300%+var(--swatches-margin-t))]": open,
+          }
         )}
       >
         <div
