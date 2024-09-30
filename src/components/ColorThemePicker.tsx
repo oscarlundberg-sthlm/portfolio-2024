@@ -57,15 +57,13 @@ function ColorThemePicker() {
       </button>
       <div
         className={classNames(
-          "bg-[var(--color-bg-dark)] overflow-hidden border border-[rgba(var(--color-theme-white-raw),0.2)] -m-2 p-2 h-[calc(400%+var(--swatches-margin-t)+18px)] inset-x-0 rounded-full absolute left-0 top-0 origin-top transition-all duration-500",
+          "bg-black overflow-hidden border border-[rgba(var(--color-theme-white-raw),0.3)] -m-2 p-2 h-[calc(400%+var(--swatches-margin-t)+18px)] inset-x-0 rounded-full absolute left-0 top-0 origin-top transition-all duration-500",
           {
             "": open,
             "scale-[0.5] translate-y-5 opacity-0": !open,
           }
         )}
-      >
-        <div className="absolute inset-0 bg-[rgba(var(--color-theme-white-raw),0.05)]"></div>
-      </div>
+      ></div>
       <button
         onClick={() => {
           setColorThemeClass("theme-lilac");
