@@ -17,7 +17,7 @@ function TrackFullScreen() {
   return (
     <div
       className={classNames(
-        "[--py-outer-bottom:8px] [--py-outer-top:8px] lg:[--py-outer-bottom:8px] lg:[--py-outer-top:8px] [--py-inner:56px] lg:[--py-inner:72px] w-full h-full bg-black fixed inset-0 z-40 transition-transform duration-500 overflow-hidden",
+        "[--py-outer-bottom:8px] [--py-outer-top:8px] lg:[--py-outer-bottom:8px] lg:[--py-outer-top:8px] [--py-inner:56px] lg:[--py-inner:72px] w-full h-full bg-black text-white fixed inset-0 z-40 transition-transform duration-500 overflow-hidden",
         {
           "translate-y-full": !fullScreenTrackOpen,
         }

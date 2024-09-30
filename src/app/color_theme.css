@@ -21,8 +21,8 @@
 .theme-orange {
 --color-primary: #C5260A;
 --color-primary-pop: #FAB700;
---color-theme-white: #FFDDD6;
---color-theme-white-20: #FFDDD62d;
+--color-theme-white: #FFE8BB;
+--color-theme-white-20: #FFE8BB2d;
 --color-hover-on-playlist: #C5260A7e;
 --color-bg-dark-raw: 21, 18, 18;
 --color-bg-dark: rgb(var(--color-bg-dark-raw));
@@ -31,8 +31,8 @@
 .theme-lilac {
 --color-primary: #463057;
 --color-primary-pop: #FF25A8;
---color-theme-white: #F4E6FF;
---color-theme-white-20: #F4E6FF2d;
+--color-theme-white: #FCF9EF;
+--color-theme-white-20: #FCF9EF2d;
 --color-hover-on-playlist: #4630577e;
 --color-bg-dark-raw: 32, 42, 58;
 --color-bg-dark: rgb(var(--color-bg-dark-raw));

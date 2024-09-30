@@ -27,11 +27,12 @@ export function ColorThemeContextProvider({
   useEffect(() => {
     // update class on body tag
     const bodyTag = document.querySelector("body");
+    if (!bodyTag) return;
 
     if (!prevColorThemeClass.current) {
-      bodyTag?.classList.add(colorThemeClass);
+      bodyTag.classList.add(colorThemeClass);
     } else {
-      bodyTag?.classList.replace(prevColorThemeClass.current, colorThemeClass);
+      bodyTag.classList.replace(prevColorThemeClass.current, colorThemeClass);
     }
 
     prevColorThemeClass.current = colorThemeClass;
