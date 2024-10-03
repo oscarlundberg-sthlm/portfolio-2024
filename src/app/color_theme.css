@@ -1,11 +1,22 @@
 :root {
-  --color-primary-raw: 70, 48, 87;
+  --color-primary-raw: 197, 38, 10;
   --color-primary: rgb(var(--color-primary-raw));
-  --color-theme-white-raw: 252, 249, 239;
+  --color-theme-white-raw: 255, 232, 187;
   --color-theme-white: rgb(var(--color-theme-white-raw));
-  --color-bg-dark-raw: 32, 42, 58;
+  --color-bg-dark-raw: 21, 18, 18;
   --color-bg-dark: rgb(var(--color-bg-dark-raw));
-  }
+  --color-logo: #FAB700;
+}
+
+.theme-orange {
+  --color-primary-raw: 197, 38, 10;
+  --color-primary: rgb(var(--color-primary-raw));
+  --color-theme-white-raw: 255, 232, 187;
+  --color-theme-white: rgb(var(--color-theme-white-raw));
+  --color-bg-dark-raw: 21, 18, 18;
+  --color-bg-dark: rgb(var(--color-bg-dark-raw));
+  --color-logo: #FAB700;
+}
 
 .theme-blue {
 --color-primary-raw: 18, 60, 98;
@@ -16,22 +27,24 @@
 --color-bg-dark: rgb(var(--color-bg-dark-raw));
 }
 
-.theme-orange {
---color-primary-raw: 197, 38, 10;
+.theme-lilac {
+--color-primary-raw: 7, 103, 125;
 --color-primary: rgb(var(--color-primary-raw));
---color-theme-white-raw: 255, 232, 187;
+--color-theme-white-raw: 240, 234, 245;
 --color-theme-white: rgb(var(--color-theme-white-raw));
---color-bg-dark-raw: 21, 18, 18;
+--color-bg-dark-raw: 48, 32, 81;
 --color-bg-dark: rgb(var(--color-bg-dark-raw));
+--color-logo: #D4258E;
 }
 
-.theme-lilac {
---color-primary-raw: 70, 48, 87;
+.theme-dusty-rose {
+--color-primary-raw: 217, 217, 217;
 --color-primary: rgb(var(--color-primary-raw));
---color-theme-white-raw: 252, 249, 239;
+--color-theme-white-raw: 18, 18, 18;
 --color-theme-white: rgb(var(--color-theme-white-raw));
---color-bg-dark-raw: 32, 42, 58;
+--color-bg-dark-raw: 177, 103, 103;
 --color-bg-dark: rgb(var(--color-bg-dark-raw));
+--color-logo: #121212;
 }
 
 .a_very_sound_resume_bg #bg {

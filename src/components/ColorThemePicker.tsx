@@ -2,6 +2,7 @@ import { useColorThemeContext } from "@/contexts/ColorTheme/ColorThemeProvider";
 import useClickOutside from "@/hooks/useClickOutside";
 import {
   ColorSwatchBlue,
+  ColorSwatchDustyRose,
   ColorSwatchLilac,
   ColorSwatchOrange,
 } from "@/svg/colorSwatches";
@@ -23,6 +24,7 @@ function ColorThemePicker() {
     "theme-blue": <ColorSwatchBlue className="h-full w-full" />,
     "theme-orange": <ColorSwatchOrange className="h-full w-full" />,
     "theme-lilac": <ColorSwatchLilac className="h-full w-full" />,
+    "theme-dusty-rose": <ColorSwatchDustyRose className="h-full w-full" />,
   };
 
   return (
@@ -51,9 +53,7 @@ function ColorThemePicker() {
             "absolute rounded-full inset-0.5 -z-10 transition-colors duration-300 bg-[var(--color-bg-dark)] brightness-50"
           )}
         ></div>
-        <PaintBrush
-          className={classNames(" h-6 w-6 fill-[var(--color-theme-white)]")}
-        />
+        <PaintBrush className={classNames(" h-6 w-6 fill-white")} />
       </button>
       <div
         className={classNames(
@@ -66,7 +66,7 @@ function ColorThemePicker() {
       ></div>
       <button
         onClick={() => {
-          setColorThemeClass("theme-lilac");
+          setColorThemeClass("theme-orange");
           setOpen(false);
         }}
         className={classNames(
@@ -81,12 +81,12 @@ function ColorThemePicker() {
             " h-8 w-8 border-2 border-white group-hover:scale-110 transition-all rounded-full flex items-center justify-center"
           )}
         >
-          <ColorSwatchLilac className="h-full w-full" />
+          <ColorSwatchOrange className="h-full w-full" />
         </div>
       </button>
       <button
         onClick={() => {
-          setColorThemeClass("theme-orange");
+          setColorThemeClass("theme-lilac");
           setOpen(false);
         }}
         className={classNames(
@@ -101,12 +101,12 @@ function ColorThemePicker() {
             " h-8 w-8 border-2 border-white group-hover:scale-110 transition-all rounded-full flex items-center justify-center"
           )}
         >
-          <ColorSwatchOrange className="h-full w-full" />
+          <ColorSwatchLilac className="h-full w-full" />
         </div>
       </button>
       <button
         onClick={() => {
-          setColorThemeClass("theme-blue");
+          setColorThemeClass("theme-dusty-rose");
           setOpen(false);
         }}
         className={classNames(
@@ -121,7 +121,7 @@ function ColorThemePicker() {
             " h-8 w-8 border-2 border-white group-hover:scale-110 transition-all rounded-full flex items-center justify-center"
           )}
         >
-          <ColorSwatchBlue className="h-full w-full" />
+          <ColorSwatchDustyRose className="h-full w-full" />
         </div>
       </button>
     </div>

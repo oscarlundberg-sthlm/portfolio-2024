@@ -37,7 +37,7 @@ body {
   }
 
   .custom-shadow {
-    filter: drop-shadow(3px 3px #a8a29e);
+    filter: drop-shadow(3px 3px var(--color-theme-white));
   }
 
 }

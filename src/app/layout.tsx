@@ -11,7 +11,7 @@ const interTight = Inter_Tight({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env?.NEXT_PUBLIC_URL ?? ""),
-  title: "yeah. that tracks",
+  title: "that tracks",
   description: "a very sound resume",
 };
 

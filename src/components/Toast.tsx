@@ -45,12 +45,12 @@ function Toast() {
             }
           )}
         >
-          <div className="min-w-full h-full relative rounded-lg overflow-hidden custom-shadow border border-gray-400 bg-black max-w-96 text-[var(--color-theme-white)]">
+          <div className="min-w-full h-full relative rounded-lg overflow-hidden custom-shadow border border-[var(--color-theme-white)] bg-[var(--color-primary)] max-w-96 text-[var(--color-theme-white)]">
             <div className="absolute inset-0 bg-custom-gray/10"></div>
             <div className="relative flex justify-between pl-5">
               <div className="grow overflow-hidden pt-2">
-                <PulseLinePulse className="inline-block stroke-[var(--color-primary)] h-8 min-w-14 max-w-14 avsr_pulse_animation" />
-                <PulseLineLine className="inline-block stroke-[var(--color-primary)] h-8 min-w-14 max-w-14 avsr_pulse_animation avsr_pulse_animation_delay -ml-px" />
+                <PulseLinePulse className="inline-block stroke-[var(--color-theme-white)] h-8 min-w-14 max-w-14 avsr_pulse_animation" />
+                <PulseLineLine className="inline-block stroke-[var(--color-theme-white)] h-8 min-w-14 max-w-14 avsr_pulse_animation avsr_pulse_animation_delay -ml-px" />
               </div>
               <div>
                 <button
