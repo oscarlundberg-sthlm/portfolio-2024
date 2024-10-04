@@ -31,7 +31,7 @@ function Header() {
           <LogoNarrow className="min-w-[80%] max-w-[80%] h-auto fill-[var(--color-logo)]" />
         </div>
         <div className="hidden lg:flex justify-center items-center px-5">
-          <LogoWide className="max-h-[80%] max-w-[100%] fill-[var(--color-logo)]" />
+          <LogoWide className="min-h-[80%] max-h-[80%] max-w-[100%] fill-[var(--color-logo)]" />
         </div>
         <div className="grow lg:hidden min-w-[5%] max-w-[5%] shrink-0"></div>
         <div className="hidden lg:flex absolute right-5 top-5 self-start place-self-end">
