@@ -2,6 +2,7 @@ import { useAudioPlayerContext } from "@/contexts/AudioPlayerContext/AudioPlayer
 import { useGlobalStatesContext } from "@/contexts/GlobalStatesProvider";
 import { LogoWide } from "@/svg/logo";
 import classNames from "classnames";
+import { useEffect } from "react";
 import AudioSeeker from "./AudioSeeker";
 import ExpanderButton from "./ExpanderButton";
 import PlayPauseButton from "./PlayPauseButton";
@@ -13,6 +14,28 @@ function TrackFullScreen() {
   const { fullScreenTrackOpen, setFullScreenTrackOpen } =
     useGlobalStatesContext();
   const { audioMetaData } = useAudioPlayerContext();
+
+  useEffect(() => {
+    // change theme color when open
+    let themeColor = "";
+
+    const bodyTag = document.querySelector("body");
+    if (!bodyTag) return;
+
+    const bodyStyles = getComputedStyle(bodyTag);
+
+    if (fullScreenTrackOpen) {
+      themeColor = "#121212";
+    } else {
+      themeColor = bodyStyles.getPropertyValue("--color-logo").trim();
+    }
+
+    const metaThemeTag = document.querySelector("meta[name='theme-color']");
+
+    if (metaThemeTag) {
+      metaThemeTag.setAttribute("content", themeColor);
+    }
+  }, [fullScreenTrackOpen]);
 
   return (
     <div

@@ -35,6 +35,15 @@ export function ColorThemeContextProvider({
       bodyTag.classList.replace(prevColorThemeClass.current, colorThemeClass);
     }
 
+    // update theme color
+    const bodyStyles = getComputedStyle(bodyTag);
+    const themeColor = bodyStyles.getPropertyValue("--color-logo").trim();
+
+    const metaThemeTag = document.querySelector("meta[name='theme-color']");
+    if (metaThemeTag) {
+      metaThemeTag.setAttribute("content", themeColor);
+    }
+
     prevColorThemeClass.current = colorThemeClass;
   }, [colorThemeClass]);
 
