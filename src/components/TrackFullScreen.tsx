@@ -59,7 +59,7 @@ function TrackFullScreen() {
         <div className="h-[var(--py-inner)] w-full flex-shrink-0 flex justify-between items-center">
           <div className="m-3 pl-4 relative self-stretch flex items-center">
             <div className="relative">
-              <LogoWide className="h-7 lg:h-8 w-auto fill-white" />
+              <LogoWide className="h-3.5 w-auto fill-white mix-blend-difference" />
             </div>
           </div>
           <div className="m-3">

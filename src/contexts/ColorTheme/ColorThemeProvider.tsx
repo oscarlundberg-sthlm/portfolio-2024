@@ -21,7 +21,7 @@ export function ColorThemeContextProvider({
   children: ReactNode;
 }) {
   const [colorThemeClass, setColorThemeClass] =
-    useState<ColorThemeClass>("theme-orange");
+    useState<ColorThemeClass>("theme-dusty-rose");
   const prevColorThemeClass = useRef<ColorThemeClass | null>();
 
   useEffect(() => {

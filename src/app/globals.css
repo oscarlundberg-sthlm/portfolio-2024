@@ -12,7 +12,11 @@
 }
 
 body {
-  @apply bg-[var(--color-bg-dark)] text-[var(--color-theme-white)] relative max-h-full h-full selection:text-[var(--color-bg-dark)] selection:bg-[var(--color-theme-white)];
+  background-image: 
+    linear-gradient(to right, rgba(var(--color-bg-dark-raw),0.5), rgba(var(--color-bg-dark-raw),0.5)),
+    linear-gradient(to right, #000000, #000000)
+  ;
+  @apply text-[var(--color-theme-white)] relative max-h-full h-full selection:text-[var(--color-bg-dark)] selection:bg-[var(--color-theme-white)];
 }
 
 @layer base {

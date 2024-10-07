@@ -66,7 +66,7 @@ function ColorThemePicker() {
       ></div>
       <button
         onClick={() => {
-          setColorThemeClass("theme-orange");
+          setColorThemeClass("theme-dusty-rose");
           setOpen(false);
         }}
         className={classNames(
@@ -81,7 +81,7 @@ function ColorThemePicker() {
             " h-8 w-8 border-2 border-white group-hover:scale-110 transition-all rounded-full flex items-center justify-center"
           )}
         >
-          <ColorSwatchOrange className="h-full w-full" />
+          <ColorSwatchDustyRose className="h-full w-full" />
         </div>
       </button>
       <button
@@ -106,7 +106,7 @@ function ColorThemePicker() {
       </button>
       <button
         onClick={() => {
-          setColorThemeClass("theme-dusty-rose");
+          setColorThemeClass("theme-orange");
           setOpen(false);
         }}
         className={classNames(
@@ -121,7 +121,7 @@ function ColorThemePicker() {
             " h-8 w-8 border-2 border-white group-hover:scale-110 transition-all rounded-full flex items-center justify-center"
           )}
         >
-          <ColorSwatchDustyRose className="h-full w-full" />
+          <ColorSwatchOrange className="h-full w-full" />
         </div>
       </button>
     </div>
