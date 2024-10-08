@@ -14,10 +14,10 @@ function Header() {
           </div>
         </div>
         <div className="lg:hidden grow pt-16 flex justify-center items-center">
-          <LogoNarrow className=" max-h-[220px] sm:max-h-[420px] h-auto fill-[var(--color-logo)]" />
+          <LogoNarrow className="grow max-h-[220px] sm:max-h-[420px] fill-[var(--color-logo)]" />
         </div>
         <div className="hidden lg:flex justify-center items-center px-5">
-          <LogoWide className="min-h-[60%] max-h-[60%] max-w-[70%] fill-[var(--color-logo)]" />
+          <LogoWide className="grow min-h-[60%] max-h-[60%] max-w-[70%] fill-[var(--color-logo)]" />
         </div>
         <div className="grow lg:hidden min-w-[5%] max-w-[5%] shrink-0"></div>
         <div className="hidden lg:flex absolute right-5 top-5 self-start place-self-end">
