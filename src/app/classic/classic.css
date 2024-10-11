@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import '../scrollbars.css';
+
+:root {
+  font-size: 16px;
+  --classic-white: #F0F0F0;
+  --classic-gray-400: #B2B2B2;
+  --classic-black: #111111;
+}
+
+body {
+  @apply text-sm md:text-base bg-[var(--classic-black)] text-[var(--classic-white)] relative h-full selection:text-[var(--classic-black)] selection:bg-[var(--classic-white)];
+}
+
+@layer base {
+  *:focus {
+    @apply ring-1 ring-white/0 outline-none;
+  }
+
+  .max-w-classic {
+    max-width: 1440px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .h-screen {
+    height: 100vh;
+    height: 100svh;
+  }
+}
