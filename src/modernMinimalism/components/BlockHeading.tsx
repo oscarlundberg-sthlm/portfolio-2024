@@ -10,7 +10,7 @@ function BlockHeading({ children, className }: Props) {
   return (
     <h2
       className={classNames(
-        "leading-[1] mb-5 font-black text-[32px] text-[var(--classic-white)] uppercase",
+        "leading-[1] mb-5 font-black text-[32px] text-[var(--modern-minimalism-white)] uppercase",
         className
       )}
     >

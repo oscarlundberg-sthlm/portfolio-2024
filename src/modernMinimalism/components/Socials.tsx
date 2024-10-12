@@ -25,7 +25,7 @@ function Socials() {
                 transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s",
               }}
             >
-              <div className="rounded-full bg-[var(--classic-white)] pt-[100%] w-full"></div>
+              <div className="rounded-full bg-[var(--modern-minimalism-white)] pt-[100%] w-full"></div>
             </div>
             <div
               style={{
@@ -34,7 +34,7 @@ function Socials() {
                 transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1)",
               }}
             >
-              <div className="rounded-full bg-[var(--classic-white)] pt-[100%] w-full"></div>
+              <div className="rounded-full bg-[var(--modern-minimalism-white)] pt-[100%] w-full"></div>
             </div>
             <Link
               href="mailto:oscarlundberg@hotmail.com"
@@ -85,7 +85,7 @@ function Socials() {
                 transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1)",
               }}
             >
-              <div className="rounded-full bg-[var(--classic-white)] pt-[100%] w-full"></div>
+              <div className="rounded-full bg-[var(--modern-minimalism-white)] pt-[100%] w-full"></div>
             </div>
             <div
               style={{
@@ -94,7 +94,7 @@ function Socials() {
                 transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s",
               }}
             >
-              <div className="rounded-full bg-[var(--classic-white)] pt-[100%] w-full"></div>
+              <div className="rounded-full bg-[var(--modern-minimalism-white)] pt-[100%] w-full"></div>
             </div>
           </div>
         </div>

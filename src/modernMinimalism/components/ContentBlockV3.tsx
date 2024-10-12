@@ -17,24 +17,24 @@ function ContentBlockV3({ image, heading, prose }: Props) {
       <section className="relative mt-6 md:hidden">
         <div className="relative w-full">
           <BlockImage image={image} position="right">
-            <div className="absolute inset-0 w-full h-full opacity-90 bg-[var(--classic-black)]"></div>
+            <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-[var(--modern-minimalism-black)] to-black/0"></div>
           </BlockImage>
 
-          <div className="mix-blend-difference mx-6 pt-32 pb-56">
+          <div className="mix-blend-difference mx-6 pt-16 pb-72">
             <BlockHeading className="max-w-[320px]">{heading}</BlockHeading>
             <BlockProse className="">{prose}</BlockProse>
           </div>
         </div>
       </section>
       <section className="relative mt-6 hidden md:block">
-        <div className="relative flex justify-start">
-          <div className="relative w-full pt-[80%] xl:pt-[56.56%]">
+        <div className="relative flex justify-end">
+          <div className="relative w-full pt-[80%] xl:pt-[60%]">
             <BlockImage image={image} position="right">
-              <div className="absolute inset-0 w-full h-full opacity-30 bg-gradient-to-r from-[var(--classic-black)] via-[var(--classic-black)] to-black/0"></div>
+              <div className="absolute inset-0 w-full h-full opacity-30 bg-gradient-to-r from-[var(--modern-minimalism-black)] via-[var(--modern-minimalism-black)] to-black/0"></div>
             </BlockImage>
           </div>
         </div>
-        <div className="absolute top-12 bottom-0 left-12 mix-blend-difference">
+        <div className="absolute top-12 bottom-0 left-[50px] mix-blend-difference">
           <div className="sticky top-1/3 mb-32">
             <div className="">
               <BlockHeading className="max-w-[320px]">{heading}</BlockHeading>

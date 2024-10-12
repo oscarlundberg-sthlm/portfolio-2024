@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import '../scrollbars.css';
+
+:root {
+  font-size: 16px;
+  --modern-minimalism-white: #F0F0F0;
+  --modern-minimalism-gray-400: #B2B2B2;
+  --modern-minimalism-black: #111111;
+}
+
+body {
+  @apply text-sm md:text-base bg-[var(--modern-minimalism-black)] text-[var(--modern-minimalism-white)] relative h-full selection:text-[var(--modern-minimalism-black)] selection:bg-[var(--modern-minimalism-white)];
+}
+
+@layer base {
+  *:focus {
+    @apply ring-1 ring-white/0 outline-none;
+  }
+
+  .max-w-modern-minimalism {
+    max-width: 1440px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .h-screen {
+    height: 100vh;
+    height: 100svh;
+  }
+}

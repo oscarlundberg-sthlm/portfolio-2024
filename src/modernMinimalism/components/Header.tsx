@@ -19,7 +19,7 @@ function Header() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="mt-5 mb-44 md:mb-[40vh]"
+        className="mt-5 mb-[22vh] md:mb-[30vh] 3xl:mb-[40vh]"
         style={{
           opacity: opacity,
         }}

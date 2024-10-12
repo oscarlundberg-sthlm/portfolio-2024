@@ -30,9 +30,12 @@ function BallRoll({ direction, roller }: Props) {
     <Container>
       <div
         ref={ref}
-        className={classNames("relative flex overflow-hidden my-[30vh]", {
-          "flex-row-reverse": direction === "left",
-        })}
+        className={classNames(
+          "relative flex overflow-hidden mt-[30vh] mb-14 md:mb-[15vh]",
+          {
+            "flex-row-reverse": direction === "left",
+          }
+        )}
       >
         <div
           className={classNames(

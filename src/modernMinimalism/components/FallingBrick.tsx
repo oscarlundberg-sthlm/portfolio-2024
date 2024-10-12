@@ -21,7 +21,7 @@ function FallingBrick() {
           className="flex justify-end w-full"
           style={{ y: translate }}
         >
-          <div className="bg-[var(--classic-white)] h-[22px] w-[50%]"></div>
+          <div className="bg-[var(--modern-minimalism-white)] h-[22px] w-[50%]"></div>
         </motion.div>
       </div>
     </Container>

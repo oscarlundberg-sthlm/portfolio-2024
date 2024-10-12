@@ -1,17 +1,17 @@
 "use client";
-import BallRoll from "@/classic/components/BallRoll";
-import Container from "@/classic/components/Container";
-import ContentBlockV1 from "@/classic/components/ContentBlockV1";
-import ContentBlockV2 from "@/classic/components/ContentBlockV2";
-import ContentBlockV3 from "@/classic/components/ContentBlockV3";
-import LogoNarrow from "@/classic/components/graphics/LogoNarrow";
-import Header from "@/classic/components/Header";
-import Socials from "@/classic/components/Socials";
 import tracks from "@/data/tracks.json";
+import BallRoll from "@/modernMinimalism/components/BallRoll";
+import Container from "@/modernMinimalism/components/Container";
+import ContentBlockV1 from "@/modernMinimalism/components/ContentBlockV1";
+import ContentBlockV2 from "@/modernMinimalism/components/ContentBlockV2";
+import ContentBlockV3 from "@/modernMinimalism/components/ContentBlockV3";
+import LogoNarrow from "@/modernMinimalism/components/graphics/LogoNarrow";
+import Header from "@/modernMinimalism/components/Header";
+import Socials from "@/modernMinimalism/components/Socials";
 import { motion } from "framer-motion";
 import React, { useEffect } from "react";
 
-export default function ClassicPage() {
+export default function ModernMinimalismPage() {
   useEffect(() => {
     // This is for removing any theme colors
     const bodyTag = document.querySelector("body");
