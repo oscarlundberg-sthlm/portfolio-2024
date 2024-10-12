@@ -15,12 +15,13 @@ function ContentBlockV3({ image, heading, prose }: Props) {
   return (
     <Container>
       <section className="relative mt-6 md:hidden">
-        <div className="relative w-full">
+        <div className="relative w-full h-[100vh]">
           <BlockImage image={image} position="right">
             <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-[var(--modern-minimalism-black)] to-black/0"></div>
+            <div className="absolute inset-0 w-full h-full bg-[var(--modern-minimalism-black)] opacity-40"></div>
           </BlockImage>
 
-          <div className="mix-blend-difference mx-6 pt-16 pb-72">
+          <div className="sticky top-[10vh] pt-16 pb-32 z-10 mx-6">
             <BlockHeading className="max-w-[320px]">{heading}</BlockHeading>
             <BlockProse className="">{prose}</BlockProse>
           </div>
@@ -34,7 +35,7 @@ function ContentBlockV3({ image, heading, prose }: Props) {
             </BlockImage>
           </div>
         </div>
-        <div className="absolute top-12 bottom-0 left-[50px] mix-blend-difference">
+        <div className="absolute top-12 bottom-0 left-[50px]">
           <div className="sticky top-1/3 mb-32">
             <div className="">
               <BlockHeading className="max-w-[320px]">{heading}</BlockHeading>
