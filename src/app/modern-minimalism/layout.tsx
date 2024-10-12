@@ -10,6 +10,14 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env?.NEXT_PUBLIC_URL ?? ""),
   title: "Oscar Lundberg - Frontend Developer",
   description: "Frontend Developer",
+  icons: {
+    icon: [
+      {
+        url: "/img/favicons/modern-minimalism.ico",
+        href: "/img/favicons/modern-minimalism.ico",
+      },
+    ],
+  },
 };
 
 export const viewport: Viewport = {

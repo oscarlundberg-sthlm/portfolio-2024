@@ -7,6 +7,14 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env?.NEXT_PUBLIC_URL ?? ""),
   title: "That tracks",
   description: "a very sound resume",
+  icons: {
+    icon: [
+      {
+        url: "/img/favicons/that-tracks.ico",
+        href: "/img/favicons/that-tracks.ico",
+      },
+    ],
+  },
 };
 
 export const viewport: Viewport = {
