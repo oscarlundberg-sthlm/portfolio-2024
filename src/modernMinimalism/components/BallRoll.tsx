@@ -16,7 +16,7 @@ function BallRoll({ direction, roller }: Props) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["1 1", "0 0"],
+    offset: ["0.1 1", "0 0.2"],
   });
   const springX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -31,7 +31,7 @@ function BallRoll({ direction, roller }: Props) {
       <div
         ref={ref}
         className={classNames(
-          "relative flex overflow-hidden mt-[30vh] mb-14 md:mb-[15vh]",
+          "relative flex overflow-hidden mt-[30vh] mb-16 md:mb-[15vh]",
           {
             "flex-row-reverse": direction === "left",
           }
@@ -40,7 +40,7 @@ function BallRoll({ direction, roller }: Props) {
         <div
           className={classNames(
             "grow relative",
-            direction === "right" ? "mr-6" : "ml-6"
+            direction === "right" ? "mr-5 md:mr-6" : "ml-5 md:ml-6"
           )}
         >
           <motion.div
@@ -51,26 +51,26 @@ function BallRoll({ direction, roller }: Props) {
             style={{ x: translateX }}
           >
             {roller === "ball" ? (
-              <Ball className="w-[80px] h-[80px] md:w-[140px] md:h-[140px] xl:w-[217px] xl:h-[217px]" />
+              <Ball className="w-[110px] h-[110px] md:w-[148px] md:h-[148px] xl:w-[217px] xl:h-[217px]" />
             ) : (
-              <Circle className="w-[80px] h-[80px] md:w-[140px] md:h-[140px] xl:w-[217px] xl:h-[217px]" />
+              <Circle className="w-[110px] h-[110px] md:w-[148px] md:h-[148px] xl:w-[217px] xl:h-[217px]" />
             )}
           </motion.div>
         </div>
         <div className="invisible">
           {roller === "ball" ? (
-            <Ball className="w-[80px] h-[80px] md:w-[140px] md:h-[140px] xl:w-[217px] xl:h-[217px]" />
+            <Ball className="w-[110px] h-[110px] md:w-[148px] md:h-[148px] xl:w-[217px] xl:h-[217px]" />
           ) : (
-            <Circle className="w-[80px] h-[80px] md:w-[140px] md:h-[140px] xl:w-[217px] xl:h-[217px]" />
+            <Circle className="w-[110px] h-[110px] md:w-[148px] md:h-[148px] xl:w-[217px] xl:h-[217px]" />
           )}
         </div>
         {direction === "right" ? (
           <div>
-            <Triangle className="w-[80px] h-[80px] md:w-[140px] md:h-[140px] xl:w-[217px] xl:h-[217px]" />
+            <Triangle className="w-[110px] h-[110px] md:w-[148px] md:h-[148px] xl:w-[217px] xl:h-[217px]" />
           </div>
         ) : (
           <div className="-rotate-90">
-            <Triangle className="w-[80px] h-[80px] md:w-[140px] md:h-[140px] xl:w-[217px] xl:h-[217px]" />
+            <Triangle className="w-[110px] h-[110px] md:w-[148px] md:h-[148px] xl:w-[217px] xl:h-[217px]" />
           </div>
         )}
       </div>

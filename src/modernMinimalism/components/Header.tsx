@@ -2,7 +2,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import Container from "./Container";
 import LogoNarrow from "./graphics/LogoNarrow";
-import LogoWide from "./graphics/LogoWide";
 
 function Header() {
   const { scrollY } = useScroll();
@@ -19,13 +18,13 @@ function Header() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="mt-5 mb-[22vh] md:mb-[30vh] 3xl:mb-[40vh]"
+        className="mt-5 mb-[22vh] md:mb-[30vh] 3xl:mb-[30vh] max-w-[320px]"
         style={{
           opacity: opacity,
         }}
       >
-        <LogoNarrow className="w-full h-auto md:hidden" />
-        <LogoWide className="w-full h-auto hidden md:block" />
+        <LogoNarrow className="w-full h-auto " />
+        {/* <LogoWide className="w-full h-auto hidden md:block" /> */}
       </motion.header>
     </Container>
   );

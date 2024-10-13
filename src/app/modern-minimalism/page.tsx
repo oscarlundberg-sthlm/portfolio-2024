@@ -2,11 +2,11 @@
 import tracks from "@/data/tracks.json";
 import BallRoll from "@/modernMinimalism/components/BallRoll";
 import Container from "@/modernMinimalism/components/Container";
+import ContentBlockTopOfPage from "@/modernMinimalism/components/ContentBlockTopOfPage";
 import ContentBlockV1 from "@/modernMinimalism/components/ContentBlockV1";
 import ContentBlockV2 from "@/modernMinimalism/components/ContentBlockV2";
 import ContentBlockV3 from "@/modernMinimalism/components/ContentBlockV3";
 import LogoNarrow from "@/modernMinimalism/components/graphics/LogoNarrow";
-import Header from "@/modernMinimalism/components/Header";
 import Socials from "@/modernMinimalism/components/Socials";
 import { motion } from "framer-motion";
 import React, { useEffect } from "react";
@@ -32,7 +32,6 @@ export default function ModernMinimalismPage() {
 
   return (
     <>
-      <Header />
       <motion.main
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -41,10 +40,17 @@ export default function ModernMinimalismPage() {
         {tracks.map((track, index) => {
           if (index === 0) {
             return (
-              <ContentBlockV1
-                index={index}
+              <ContentBlockTopOfPage
                 key={track.id}
                 image={track.image}
+                preText={
+                  <header className="mb-[20vh]">
+                    <LogoNarrow
+                      size="mini"
+                      className="w-full h-auto max-w-[130px] md:max-w-[140px]"
+                    />
+                  </header>
+                }
                 heading={<>Welcome!</>}
                 prose={
                   <>
