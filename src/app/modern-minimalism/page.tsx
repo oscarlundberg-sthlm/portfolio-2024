@@ -55,8 +55,13 @@ export default function ModernMinimalismPage() {
                 prose={
                   <>
                     <p>
-                      I'm a frontend developer graduate who got hired as a
-                      software engineer straight out of&nbsp;school.
+                      I'm a frontend developer graduate who's driven by design,
+                      communication and psychology. I'm all about the
+                      "soft&nbsp;values".
+                    </p>
+                    <p className=" text-sm opacity-60">
+                      <br />
+                      Scroll for more <span className=" align-middle">▼</span>
                     </p>
                   </>
                 }
@@ -74,7 +79,7 @@ export default function ModernMinimalismPage() {
                     <>
                       <p>
                         I've worked with frameworks like Next.js (React,
-                        TypeScript, JavaScript) and Laravel (PHP, Blade). CMSs'
+                        TypeScript) and Laravel (PHP, Blade, Alpine.js). CMSs'
                         like Sanity, Statamic and Wordpress. All kinds of
                         third-party&nbsp;integrations.
                       </p>

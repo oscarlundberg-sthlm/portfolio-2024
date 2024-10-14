@@ -68,7 +68,7 @@ function BlockImage({ image, position, children }: Props) {
       >
         <Image
           className={classNames(
-            "absolute inset-0 w-full h-full saturate-[0.3] object-cover"
+            "absolute inset-0 w-full h-full saturate-[1] object-cover"
           )}
           src={image.src}
           height={image.height}
